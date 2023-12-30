@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>mainpage</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/menu.css">
+	<link rel="stylesheet" href="css/scrolldown2.css">
+	<script src="js/jquery-1.11.2.min.js"></script>		
+    <script src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<script src="js/jquery.fittext.js"></script>
+	<link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+	<link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+	
+	<style>
+		@import url('https://fonts.googleapis.com/css?family=Hind|Montserrat');
+	</style>
+	<script>
+
+		$(function () {
+			$(".cta").click(function () {
+				$("html, body").animate({ scrollTop: $("#second").offset().top }, 1000);
+
+			});
+
+			$("#first").on("mousewheel", function () {
+				return false;
+
+			});
+
+
+			$("#hamburger-menu").click(function () {
+				$("#menu-container").animate({ marginLeft: "75%" }, 300);
+				$(".cross").stop().show();
+			});
+
+
+
+			$(".menu-list >li").click(function () {
+				if ($(this).next().is(":visible")) {
+					$(this).next().stop().slideUp(500);
+					$(this).removeClass("active-tab");
+					$(this).find("a").removeClass("active");
+
+				} else {
+					$(".menu-submenu").stop().slideUp(500);
+					$(this).next().stop().slideDown(500);
+					$(".menu-list >li").removeClass("active-tab");
+					$(this).addClass("active-tab");
+					$(".menu-list >li>a").removeClass("active");
+					$(this).find("a").addClass("active");
+				}
+			});
+
+
+			$(".cross").click(function () {
+				$("#menu-container").animate({ marginLeft: "0" }, 300);
+				$("#hamburger-menu").stop().show();
+				$(".cross").stop().hide();
+			});
+
+			$('#banner').slick({
+				//    dots:true,
+				autoplay: true,
+				infinite: true,
+				autoplaySpeed: 4000,
+				slidesToShow: 1,
+			});
+
+			$(".play").on("click",function(){
+            $("#banner").slick("slickPlay");
+         });
+
+         $(".pause").on("click",function(){
+            $("#banner").slick("slickPause");
+          });
+     
+
+			$(".wrap h1").fitText(0.55);
+             
+			
+
+
+	});
+
+	</script>
+</head>
+
+<body>
+	<div id="header">
+		<div class="header-container">
+			<ul class="gnb cf">
+				<li><a href="scrolldown_portfolio.html">main</a></li>
+				<li><a href="#anchor">clothes portfolio</a></li>
+				<li><a href="workportfolio.html">work portfolio</a></li>
+			</ul>
+		</div>
+	</div>
+
+
+	<div id="hamburger-menu">
+		<span></span> <span></span> <span></span>
+	</div>
+
+
+	<nav id="menu-container">
+		<div class="head">
+			<button class="cross">&#735;</button>
+
+		</div>
+
+		<ul class="menu-list">
+			<li id="nav1" class="accordion">
+				<a class="menu-link" href="scrolldown_portfolio.html">main</a>
+			</li>
+
+
+			<li id="nav2" class="accordion">
+				<a class="menu-link" href="scrolldown_portfolio.html">profile</a>
+			</li>
+
+			<li id="nav3" class="accordion-toggle">
+				<a class="menu-link" href="workportfolio.html">work portfolio</a>
+			</li>
+
+			<ul class="menu-submenu accordion-content">
+				<li><a href="Rollin.html">Rollin carrier backpack</a></li>
+				<li><a href="tabletpouch.html">Slow travel Pouch</a></li>
+				<li><a href="Cremamotifcase.html">Crema motif case</a></li>
+				<li><a href="ebookzabara.html">ebook zabara</a></li>
+				<li><a href="Protector_glass.html">Protector glass</a></li>
+				<li><a href="keybordroof.html">Keybordroof</a></li>
+				<li><a href="dapcase.html">Dap case</a></li>
+				<li><a href="product_illust.html">Product illust</a></li>
+			</ul>
+
+		</ul>
+	</nav>
+
+
+	<section id="first">
+		<div class="wrap wpc">
+			<h1>Portfolio</h1>
+			<p>안녕하세요. '데일리브'와 함께 즐겁게 일하고 싶은 지원자 조혜영입니다. <br>하단에는 의류 관련 포토샵 작업물을 넣었으며, work portfolio 에는
+ 				<br>웹디자이너 근무시 직접 제작한 작업물을 넣었습니다. </p>
+		</div>
+		<div class="wrap wmobile">
+			<h1>Portfolio</h1>
+			<p>안녕하세요. '데일리브'와 함께 즐겁게 일하고 싶은 지원자 조혜영입니다. 하단에는 의류 관련 포토샵 작업물을 넣었으며, work portfolio 에는
+ 				웹디자이너 근무시 직접 제작한 작업물을 넣었습니다. </p>
+		</div>
+		<a href="#" class="cta" onclick="return false">
+			<span> </span>Scroll</a>
+	</section>
+
+
+	<section id="second">
+		<h2></h2>
+		<section id="dailyeve">
+			<h2>데일리브 배너</h2>
+			<p>데일리브 제품컷과 이미지를 활용한 배너를 제작하였습니다</p>
+				<ul id="banner">
+					<li class="slick-slide"><a href="#"> <img src="image/banner1.gif" alt="[울50%]롤리팝 울 크롭 스트라이프 니트 베스트 2color 배너"></a></li>
+					<li class="slick-slide "><a href="#"> <img src="image/banner2.gif" alt="커스터드 후드 더플 니트 꽈배기 떡볶이 가디건 1color 배너"></a></li>
+					<li class="slick-slide"><a href="#"> <img src="image/banner_3.jpg" alt="카야 양기모 무지 크롭 후드티 7color 배너"></a></li>
+				</ul>
+			<button class="play">시작</button>
+		    <button class="pause">정지</button>
+		</section>
+        
+	    </body>
+	
+		<section id="Ladyvolume">
+			<h2>기획전 페이지</h2>
+			<p>레이디 볼륨'이라는 브랜드의 기획전 페이지를 제작하였습니다.</p>
+			<img src="image/promotionimage.jpg" alt="">
+			<div class="background"> 
+				<ul class="slider center">
+					<li><h3><img src="image/slide_img1.jpg" alt=""></h3> </li>
+					<li><h3><img src="image/slide_img2.jpg" alt=""></h3> </li>
+					<li><h3><img src="image/slide_img3.jpg" alt=""></h3> </li>
+					<li><h3><img src="image/slide_img4.jpg" alt=""></h3> </li>
+					<li><h3><img src="image/slide_img5.jpg" alt=""></h3> </li>
+					<li><h3><img src="image/slide_img6.jpg" alt=""></h3> </li>
+				</ul>
+				</div>
+			</section>	
+	</section>
+	
+   </script>
+</body>
+
+
+</html>
+		
