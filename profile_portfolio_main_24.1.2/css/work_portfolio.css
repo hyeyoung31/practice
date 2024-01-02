@@ -1,0 +1,96 @@
+
+/* NotoSansKR */
+@font-face {font-family: "NotoSansT"; src: url(../font/NotoSansKR_Thin.woff) format("woff");} /* Thin */
+@font-face {font-family: "NotoSansL"; src: url(../font/NotoSansKR_Light.woff) format("woff");} /* Light */
+@font-face {font-family: "NotoSansR"; src: url(../font/NotoSansKR_Regular.woff) format("woff");} /* Regular */
+@font-face {font-family: "NotoSansM"; src: url(../font/NotoSansKR_Medium.woff) format("woff");} /* Medium */
+@font-face {font-family: "NotoSansB"; src: url(../font/NotoSansKR_Bold.woff) format("woff");} /* bold */
+@font-face {font-family: "NotoSansBL"; src: url(../font/NotoSansKR_Black.woff) format("woff");} /* black */
+
+/* NanumGothic */
+@font-face {font-family: "NanumGothicR"; src: url(../font/NanumGothic_Regular.woff) format("woff");} /* Regular */
+@font-face {font-family: "NanumGothicB"; src: url(../font/NanumGothic_Bold.woff) format("woff");} /* bold */
+@font-face {font-family: "NanumGothicEB"; src: url(../font/NanumGothic_ExtraBold.woff) format("woff");} /* Extra bold */
+
+
+
+body {font-family: 'Montserrat',sans-serif; box-sizing: border-box; }
+a {text-decoration:none; color:#000; font-size:1rem;}
+*,*:after,*:before {box-sizing: border-box;}
+
+
+
+#tab_contain { width:60%; margin:9rem auto 0 auto;}
+.tab {background: #000; width:100%;
+       display:flex; justify-content: space-around; padding:0.7rem 0;}
+.tab span {color: #fff; }
+.tab li {margin:0 auto;}
+.tab li a {font-weight: bold;color:#fff; font-size:1rem;}
+.tab li a.selected {color: #fff; cursor: default;}
+
+/*space around 같은 비율로 떨어지게 .defualt 화살표 */
+
+.tab_menu {width:100%; display:flex; flex-wrap: wrap; margin-top:2rem; margin-bottom:3rem;}
+.tab_menu li {width: 50%; padding:0.2rem 0.2rem;}
+.tab_menu li img {width:100%;}
+.tab_menu li a {text-align: center; color: #000;position:relative; display:block;}
+/* before로 투명박스 만드려고. 반투명박스가 a에 곽 맞아야해서 absolute 줘야 하기 때문에 여기 relative붙임 */
+.tab_menu li a:before {position:absolute; left:0; top:0;
+width:100%; height: 100%; z-index: 10; background: #000;
+ content:"";opacity:0; transition: all 0.2s;}
+ .tab_menu li a:hover:before {opacity:0.9;}
+ .wrap { position: absolute; left: 50%; top: 50%;z-index :20; opacity:0;}
+ .wrap span.txt {font-size: 0.9rem;}
+ .tab_menu li a:hover .wrap {transform: translate(-50%, -50%); opacity:1;}
+ .wrap .txt {color:#fff; font-size: 1rem; line-height: 25px; font-weight: normal;}
+ .tab_menu span {display:block; padding-top: 10px; font-size: 1rem;}
+ .name {display: inline-block; padding-top: 30px;
+     font-size:1.1rem!important;font-weight: 800;padding-bottom:10px;}
+
+
+
+#banner_pc {width:100%; max-height:25rem;margin:0 auto; text-align:center;  margin-top:5rem; position:relative;
+}
+ .slick-slide img {width:100%;}
+ #banner_pc button {border:none;}
+ #banner_pc button.slick-prev { font-size:0; color:transparent;}
+ #banner_pc button.slick-next { font-size:0; color:transparent;}
+
+
+ .slick-dots {position:absolute;bottom:2rem;left:50%;
+  transform:translateX(-50%);text-align:center;}
+.slick-dots li{width: 1.3rem;height:1.3rem; display:inline-block; }  
+.slick-dots >li >button{font-size:0;color:#fff;width:0.8rem;height:0.8rem;
+             background: rgba(0,0,0,0.3); border-radius:0.4rem;}  
+.slick-dots >li.slick-active button {background:rgba(0,0,0,1);}        
+#banner_mobile {display:none;}
+      @media screen and (max-width:1200px){ 
+       
+    
+         #tab_contain { width:80%; margin:9rem auto 0 auto;}
+         .tab_menu li {padding:0.2rem 0.2rem;}
+         .tab li a {font-size:0.75rem;}
+         .tab_menu span {font-size:0.75rem;}
+           }
+
+           @media screen and (max-width:450px){ 
+         
+          #banner_pc {display:none;}
+           #banner_mobile {display:block;}
+           #banner_mobile {width:100%; max-height:25rem;margin:0 auto; text-align:center;  margin-top:5rem; position:relative;
+           }
+            .slick-slide img {width:100%;}
+            #banner_mobile button {border:none;}
+            #banner_mobile button.slick-prev { font-size:0; color:transparent;}
+            #banner_mobile button.slick-next { font-size:0; color:transparent;}
+           
+           
+            .slick-dots {position:absolute;bottom:2rem;left:50%;
+             transform:translateX(-50%);text-align:center;}
+           .slick-dots li{width: 1.3rem;height:1.3rem; display:inline-block; }  
+           .slick-dots >li >button{font-size:0;color:#fff;width:0.8rem;height:0.8rem;
+                        background: rgba(0,0,0,0.3); border-radius:0.4rem;}  
+           .slick-dots >li.slick-active button {background:rgba(0,0,0,1);}        
+              }
+         
+        

@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>mainpage</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/menu.css">
+	<link rel="stylesheet" href="css/index.css">
+	<script src="js/jquery-1.11.2.min.js"></script>
+    
+	<script src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<script src="js/jquery.fittext.js"></script>
+	<script src="js/menu.js"></script>
+	<link rel="stylesheet" href="css/slick-theme.css">
+	<link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+	<script src="js/swiper.min (1).js"></script>
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+	<link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+
+	<style>
+		@import url('https://fonts.googleapis.com/css?family=Hind|Montserrat');
+
+		.background img {
+			width: 100%;
+		}
+
+		/*스케일 슬라이드*/
+		.pr_slide {
+			position: relative;
+			top: -5px;
+			height: 1200px;
+			overflow: hidden;
+		}
+
+		.background {
+			position: absolute;
+			width: 100%;
+			top: 0;
+			left: 0;
+		}
+
+		.image-swiper-container1 {
+			position: absolute;
+			width: 100%;
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%);
+		}
+
+		.image-swiper-container1 .swiper-slide img {
+			transition: all 200ms linear;
+			/* transform: scale(0.7); */
+			filter: grayscale(5);
+		}
+
+		.image-swiper-container1 .swiper-slide-active {
+			/* width: 300px !important; */
+			transform: scale(1.05);
+			filter: grayscale(0);
+			margin-right: -52px !important;
+			z-index: 1;
+		}
+
+		.image-swiper-container1 .swiper-slide-active img {
+			/* width: 300px!important; */
+			transform: scale(1.05);
+			margin: 0 100px 0 -30px !important;
+			filter: grayscale(0);
+		}
+
+		.image-swiper-container1 .swiper-slide img {
+			overflow: hidden;
+			width: 100%;
+		}
+	</style>
+	<script>
+
+		$(function () {
+			$(".cta").click(function () {
+				$("html, body").animate({ scrollTop: $("#second").offset().top }, 1000);
+
+			});
+
+			$("#first").on("mousewheel", function () {
+				return false;
+
+			});
+
+
+			$('#banner').slick({
+				//    dots:true,
+				autoplay: true,
+				infinite: true,
+				autoplaySpeed: 4000,
+				slidesToShow: 1,
+			});
+
+			$(".play").on("click", function () {
+				$("#banner").slick("slickPlay");
+			});
+
+			$(".pause").on("click", function () {
+				$("#banner").slick("slickPause");
+			});
+
+
+			$(".wrap h1").fitText(0.55);
+
+		});
+
+	</script>
+
+	</script>
+</head>
+
+<body>
+	<div id="header">
+		<div class="header-container">
+			<ul class="gnb cf">
+				<li><a href="#">main</a></li>
+				<li><a href="#second">clothes portfolio</a></li>
+				<li><a href="workportfolio.html">work portfolio</a></li>
+			</ul>
+		</div>
+	</div>
+
+
+	<div id="hamburger-menu">
+		<span></span> <span></span> <span></span>
+	</div>
+
+
+	<nav id="menu-container">
+		<div class="head">
+			<button class="cross">&#735;</button>
+
+		</div>
+
+		<ul class="menu-list">
+			<li id="nav1" class="accordion">
+				<a class="menu-link" href="#">main</a>
+			</li>
+
+
+			<li id="nav2" class="accordion">
+				<a class="menu-link" href="#second">clothes portfolio</a>
+			</li>
+
+			<li id="nav3" class="accordion-toggle">
+				<a class="menu-link" href="workportfolio.html">work portfolio</a>
+			</li>
+
+			<ul class="menu-submenu accordion-content">
+				<li><a href="Rollin.html">Rollin carrier backpack</a></li>
+				<li><a href="tabletpouch.html">Slow travel Pouch</a></li>
+				<li><a href="Cremamotifcase.html">Crema motif case</a></li>
+				<li><a href="ebookzabara.html">ebook zabara</a></li>
+				<li><a href="Protector_glass.html">Protector glass</a></li>
+				<li><a href="keybordroof.html">Keybordroof</a></li>
+				<li><a href="dapcase.html">Dap case</a></li>
+				<li><a href="product_illust.html">Product illust</a></li>
+			</ul>
+
+		</ul>
+	</nav>
+
+
+	<section id="first">
+		<div class="wrap wpc">
+			<h1>Portfolio</h1>
+			<p>안녕하세요. '데일리브'와 함께 즐겁게 일하고 싶은 지원자 조혜영입니다. <br>하단에는 의류 관련 포토샵 작업물을 넣었으며, work portfolio 에는
+				<br>웹디자이너 근무시 직접 제작한 작업물을 넣었습니다.
+			</p>
+		</div>
+		<div class="wrap wmobile">
+			<h1>Portfolio</h1>
+			<p>안녕하세요. '데일리브'와 함께 즐겁게 일하고 싶은 지원자 조혜영입니다. 하단에는 의류 관련 포토샵 작업물을 넣었으며, work portfolio 에는
+				웹디자이너 근무시 직접 제작한 작업물을 넣었습니다. </p>
+		</div>
+		<a href="#" class="cta" onclick="return false">
+			<span> </span>Scroll</a>
+	</section>
+
+
+	<section id="second">
+		<h2></h2>
+		<section id="dailyeve">
+			<h2>데일리브 배너</h2>
+			<p>데일리브 제품컷과 이미지를 활용한 배너를 제작하였습니다</p>
+			<ul id="banner">
+				<li class="slick-slide"><a href="#"> <img src="image/banner1.gif"
+							alt="[울50%]롤리팝 울 크롭 스트라이프 니트 베스트 2color 배너"></a></li>
+				<li class="slick-slide "><a href="#"> <img src="image/banner2.gif"
+							alt="커스터드 후드 더플 니트 꽈배기 떡볶이 가디건 1color 배너"></a></li>
+				<li class="slick-slide"><a href="#"> <img src="image/banner_3.jpg" alt="카야 양기모 무지 크롭 후드티 7color 배너"></a>
+				</li>
+			</ul>
+			<button class="play">시작</button>
+			<button class="pause">정지</button>
+		</section>
+
+
+
+		<section id="Ladyvolume">
+			<h2>기획전 페이지</h2>
+			<p>레이디 볼륨'이라는 브랜드의 기획전 페이지를 제작하였습니다.</p>
+			<img src="image/promotionimage.jpg" alt="">
+			<div class="pr_slide">
+
+				<div class="background">
+					<img src="image/background.jpg">
+
+
+
+					<div class="image-swiper-container1 swiper-initialized swiper-horizontal swiper-free-mode">
+						<div class="swiper-wrapper" id="swiper-wrapper-60686df622627df5" aria-live="off"
+							style="transition-duration: 0ms; transform: translate3d(-4607.5px, 0px, 0px); transition-delay: 0ms;">
+
+
+							<div class="swiper-slide" role="group" aria-label="3 / 16" data-swiper-slide-index="2"
+								style="width: 465px; margin-right: 20px;">
+								<img src="image/slide_img1.jpg" alt="">
+							</div>
+							<div class="swiper-slide" role="group" aria-label="4 / 16" data-swiper-slide-index="3"
+								style="width: 465px; margin-right: 20px;">
+								<img src="image/slide_img2.jpg" alt="">
+							</div>
+							<div class="swiper-slide" role="group" aria-label="5 / 16" data-swiper-slide-index="4"
+								style="width: 465px; margin-right: 20px;">
+								<img src="image/slide_img3.jpg" alt="">
+							</div>
+							<div class="swiper-slide" role="group" aria-label="6 / 16" data-swiper-slide-index="5"
+								style="width: 465px; margin-right: 20px;">
+								<img src="image/slide_img4.jpg" alt="">
+							</div>
+							<div class="swiper-slide" role="group" aria-label="7 / 16" data-swiper-slide-index="6"
+								style="width: 465px; margin-right: 20px;">
+								<img src="image/slide_img5.jpg" alt="">
+							</div>
+							<div class="swiper-slide" role="group" aria-label="8 / 16" data-swiper-slide-index="7"
+								style="width: 465px; margin-right: 20px;">
+								<img src="image/slide_img6.jpg" alt="">
+							</div>
+							<div class="swiper-slide" role="group" aria-label="9 / 16" data-swiper-slide-index="8"
+								style="width: 465px; margin-right: 20px;">
+								<img src="image/slide_img1.jpg">
+							</div>
+							<div class="swiper-slide" role="group" aria-label="10 / 16" data-swiper-slide-index="9"
+								style="width: 465px; margin-right: 20px;">
+								<img src="image/slide_img2.jpg">
+							</div>
+							<div class="swiper-slide" role="group" aria-label="11 / 16" data-swiper-slide-index="10"
+								style="width: 465px; margin-right: 20px;">
+								<img src="image/slide_img3.jpg">
+							</div>
+							<div class="swiper-slide" role="group" aria-label="12 / 16" data-swiper-slide-index="11"
+								style="width: 465px; margin-right: 20px;">
+								<img src="image/slide_img4.jpg">
+							</div>
+							<div class="swiper-slide swiper-slide-prev" role="group" aria-label="13 / 16"
+								data-swiper-slide-index="12" style="width: 465px; margin-right: 20px;">
+								<img src="image/slide_img5.jpg">
+							</div>
+							<div class="swiper-slide swiper-slide-active" role="group" aria-label="14 / 16"
+								data-swiper-slide-index="13" style="width: 465px; margin-right: 20px;">
+								<img src="image/slide_img6.jpg">
+							</div>
+							<!-- <div class="swiper-slide swiper-slide-next" role="group" aria-label="15 / 16" data-swiper-slide-index="14" style="width: 465px; margin-right: 20px;">
+					  <img src="image/slide_img1.jpg">
+					</div><div class="swiper-slide" role="group" aria-label="16 / 16" data-swiper-slide-index="15" style="width: 465px; margin-right: 20px;">
+					  <img src="image/slide_img2.jpg">
+					</div><div class="swiper-slide" role="group" aria-label="1 / 16" data-swiper-slide-index="0" style="width: 465px; margin-right: 20px;">
+					  <img src="image/slide_img3.jpg">
+					</div><div class="swiper-slide" role="group" aria-label="2 / 16" data-swiper-slide-index="1" style="width: 465px; margin-right: 20px;">
+					  <img src="image/slide_img4.jpg">
+					</div> -->
+						</div>
+						<span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+					</div>
+				</div>
+
+			</div>
+
+
+		</section>
+	</section>
+	<script type="text/javascript">
+
+		//swiper image
+		const swiper1 = new Swiper('.image-swiper-container1', {
+			slidesPerView: 4,
+			spaceBetween: 10,
+			centeredSlides: true,
+			freeMode: true,
+			speed: 1000,
+			autoplay: {
+				delay: 2000,
+			},
+			loop: true,
+		});
+
+		function handleScroll() {
+			var elems = document.querySelectorAll('.up-on-scroll');
+			Array.prototype.forEach.call(elems, function (elem) {
+				var class_list = elem.classList;
+				if (class_list.contains('left-animation')) {
+					if (isElementUnderBottom(elem, -250)) {
+						elem.style.opacity = "0";
+						elem.style.transform = 'translateX(-100px)';
+					} else {
+						elem.style.opacity = "1";
+						elem.style.transform = 'translateX(0)';
+					}
+				} else if (class_list.contains('right-animation')) {
+					if (isElementUnderBottom(elem, -250)) {
+						elem.style.opacity = "0";
+						elem.style.transform = 'translateX(100px)';
+					} else {
+						elem.style.opacity = "1";
+						elem.style.transform = 'translateX(0)';
+					}
+				} else if (class_list.contains('fadeIn-animation')) {
+					if (isElementUnderBottom(elem, -250)) {
+						elem.style.opacity = "0";
+					} else {
+						elem.style.opacity = "1";
+					}
+				}
+			});
+		}
+	</script>
+
+</body>
+
+
+</html>
