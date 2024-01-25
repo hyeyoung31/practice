@@ -305,4 +305,18 @@ a {
   .slick-dots>li.slick-active button {
     background: rgba(0, 0, 0, 1);
   }
+
+    .tab_menu li a {
+    font-size: 0.7rem;
+    padding: 0.1rem 0.3rem;
+}
+
+ .tab_menu {
+  padding: 0 0.2rem;
+ }
+
+ #tab_wrapper {
+  width: 90%;
+  margin: 4rem auto 0 auto;
+}
 }
