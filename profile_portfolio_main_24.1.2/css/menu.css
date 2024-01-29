@@ -1,18 +1,15 @@
-
+@import url('https://fonts.googleapis.com/css?family=Hind|Montserrat');
 #header {width:100%; height:5rem; position:relative;z-index:999; position:fixed; top: 0; background:rgba(250, 250, 250, 0.8)}
 a{text-decoration: none; color:#000;}
-.header-container {height:5rem; width:60%; margin:0 auto;}
-
-.gnb{  width: 60%; height:100%; margin:0 auto; padding-right:0.5rem; } 
+.header-container {width:60%; margin:0 auto;}
+.gnb {width: 60%; height:100%; margin:0 auto;} 
   
 .gnb> li{float:left;width:33.33%; text-align:center; }
 
-.gnb> li >a{  display:inline-block;  line-height: 5rem;  margin:0 auto; font-size:1.1rem;
-	           position:relative; text-align:center; font-weight:600; }
+.gnb> li >a{  display:inline-block;  line-height: 5rem; padding: 0 1rem; font-size:1.1rem; text-align:center; font-weight:600; }
 
 
 #hamburger-menu {
-  position:relative;
   width:25px;
   height:13px;
   margin:15px;
@@ -30,8 +27,7 @@ a{text-decoration: none; color:#000;}
 	border-radius:10px;
 	background:#000;
 	position:absolute;
-	transform: rotate(0deg);
-	transition:.4s ease-in-out;
+
 }
 
 #hamburger-menu span:nth-child(1) {top:0;}
@@ -57,9 +53,9 @@ a{text-decoration: none; color:#000;}
 	display:none;
   }
   
-.head {height:60px;background: #403c3b;;line-height:60px;}
-.head>ul>li {margin-right:1rem;}
-.head>ul>li:last-child {margin-right:0;}	   
+.head {height:60px;background: #403c3b;
+
+}
 
 .search img {width:55%;}
 .head a {color:#fff;}
@@ -79,19 +75,17 @@ a{text-decoration: none; color:#000;}
   left:-75%;
  }
 
- .accordion { padding:20px; 
-  border-top:1px solid #fff; }
+ .accordion { padding:20px;  letter-spacing: 1px; }
  .accordion-toggle{
-    padding:20px; 
-    border-top:1px solid #999; }
-  .accordion-toggle a {font-weight:500;font-size:1rem;}
-  .accordion-toggle a:hover {font-weight:600;font-size:1rem;}
-  .menu-list li:first-child {border-top:0;}
+    padding:20px; }
+  .accordion:nth-child(n+2):nth-child(-n+3) {border-top:1px solid #999; }
+  .accordion-toggle:hover {font-weight:600;font-size:1rem;}
+
 
   .accordion-toggle, .accordion-content {
-    cursor: pointer;    font-size: 16px;    position: relative;    letter-spacing: 1px;}
+    cursor: pointer;  position: relative;}
 
-  .accordion-content {    display: none; padding:0 5%;}
+  .accordion-content {    display: none; padding:0 5%;  letter-spacing: 1px;}
 
   .accordion-toggle a:before, .accordion-toggle a:after {
     content: '';
@@ -108,9 +102,9 @@ a{text-decoration: none; color:#000;}
   }
  
 .accordion-toggle a:before {transform:rotate(-90deg); opacity:1; z-index:2;}
-.accordion-toggle.active-tab {  transition: all 0.3s ease; }
+.accordion-toggle a.active {font-weight:600;}
 .accordion-toggle a.active:before {transform: rotate(0deg); background:#5a5858;}
-.accordion-toggle a.active:after { transform: rotate(180deg);background: #5a5858;  opacity: 0;}  
+.accordion-toggle a.active:after { transform: rotate(180deg);background: #5a5858; opacity: 0;}  
 
 
 #hamburger-menu {display:none;}
