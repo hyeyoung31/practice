@@ -1,0 +1,212 @@
+/* @CHARSET "ISO-8859-1"; */
+@charset "utf-8";
+
+
+/* rwd_chy CSS
+ * --------------------------------------- */
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+}
+
+/* @font-face {
+    font-family: 'GmarketSans';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+} */
+
+@font-face {
+	font-family:'GmarketSans';
+	src:url(../font/GmarketSansTTFLight.ttf) format('truetype');
+	font-weight:300;
+ }
+
+@font-face {
+	font-family: 'Pretendard';
+	src: url(../font/Pretendard-Light.woff2) format('woff');
+	font-weight: 300;
+	font-style: normal;
+}
+
+
+@font-face {
+	font-family: 'Pretendard';
+	src: url(../font/Pretendard-Regular.woff2) format('woff');
+	font-weight: 400;
+	font-style: normal;
+}
+
+
+@font-face {
+	font-family: 'Pretendard';
+	src: url(../font/Pretendard-Medium.woff2) format('woff');
+	font-weight: 500;
+	font-style: normal;
+}
+
+
+@font-face {
+	font-family: 'Pretendard';
+	src: url(../font/Pretendard-SemiBold.woff2) format('woff');
+	font-weight: 600;
+	font-style: normal;
+}
+
+
+
+
+body a {
+	font-family: Pretendard;
+	font-size: 1rem;
+	color: #000;
+}
+
+
+/* 슬라이드 페이지 버튼 */
+
+.section {
+	position: relative;
+}
+
+.section .fp-controlArrow {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	margin-top: 45px;
+	z-index: 999;
+	width: 50px;
+	height: 50px;
+	border-radius: 100%;
+	background-color: rgba(0, 0, 0, 0.3);
+	border: none;
+	outline: none;
+}
+
+.fp-controlArrow:before {
+	font-family: "xeicon";
+	color: rgba(255, 255, 255, 0.8);
+	font-size: 35px;
+}
+
+.fp-controlArrow:before:hover {
+	color: rgba(255, 255, 255, 1);
+}
+
+.fp-prev {
+	left: 50px;
+	font-size: 0;
+	color: transparent;
+}
+
+.fp-prev:before {
+	content: "\e93b";
+	position: relative;
+	top: 7px;
+	left: 5px;
+}
+
+.fp-next {
+	right: 50px;
+	font-size: 0;
+	color: transparent;
+}
+
+.fp-next:before {
+	content: "\e93e";
+	position: relative;
+	top: 7px;
+	left: 8px;
+}
+
+#section1 .button {
+	margin-top: 15px;
+}
+
+#section1 .button a {
+	color: #fff;
+	display: inline-block;
+	border: 1px solid #fff;
+	padding: 11px 13px;
+	font-size: 0.8rem;
+}
+
+#section1 .button a:nth-child(1) {
+	margin-right: 4%;
+}
+
+#section1 .text {
+	position: absolute;
+	bottom: 10%;
+	right: -10%;
+}
+
+#section1 .text img {
+	width: 56%;
+}
+
+#section1 .text a:hover {
+	opacity: 0.7;
+	cursor: pointer;
+}
+
+.text {
+	text-align: center;
+}
+
+.text * {
+	opacity: 0;
+	animation: fadeInUp 1s forwards;
+	transform: translateY(30px);
+}
+
+.text .button {
+	animation-delay: 0.2s;
+}
+
+
+
+@keyframes fadeInUp {
+	0% {
+		opacity: 0;
+		transform: translateY(30px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+#section2 .text2 {
+	text-align: center;
+	color:#fff;
+    left:50%;
+}
+
+.text2 p:nth-child(1) {
+	font-family: GmarketSans;
+	font-weight: 300;
+	/* font-style:bold; */
+	font-size: 2.2rem;
+	letter-spacing: 0.15rem;
+}
+
+.text2 span {
+	font-family: "sandoll-gongbyunggaktab", sans-serif;
+	font-weight: 500;
+	font-style: normal;
+	font-size: 3.6rem;
+	margin: 0 0.rem;
+
+}
+
+.text2 p:nth-child(2) {
+	font-family: Pretendard;
+	font-weight: 300;
+	letter-spacing: 0.2rem;
+	font-size: 0.7rem;
+	margin-top: 5px;
+}
+

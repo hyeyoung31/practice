@@ -1,0 +1,397 @@
+<? 
+	session_start(); 
+?>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>it MICHHA </title>
+	
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/menu.css">
+
+	<script src="js/jquery-1.11.2.min.js"></script>
+	<script src="js/jquery.fullPage.js"></script>
+	<script src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<script src="js/waypoints.min.js"></script>
+	<script src="js/rwdapp.js"></script>
+	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="js/rwd_chy.js"></script>
+
+	<style>
+	#slide1-1 {	background: url(imgs/mainimage2.jpg)  40% 0%/ cover no-repeat;}
+    #slide2-1 {background: url(imgs/2-1main.jpg)  20% 100%/ cover no-repeat;}
+
+	</style>
+    	
+	
+	<script>
+			(function(d) {
+			  var config = {
+				kitId: 'use0txu',
+				scriptTimeout: 3000,
+				async: true
+			  },
+			  h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+			})(document);
+	</script>
+	
+</head>
+
+<body>
+
+
+	<header id="allmenu">
+		<nav id="header">
+			<div class="header-container cf">
+				<ul id="pc_gnb">
+					<li><a href="#">BRAND</a></li>
+					<li><a href="#">PRODUCT</a></li>
+					<li><a href="#">OUTLET</a></li>
+					<li><a href="#">COLLECTION</a></li>
+				</ul>
+
+				<ul class="icon cf">
+					<li><a href="#"><i class="xi-search"></i></a></li>
+					<li><a href="#">Cart</a></li>
+					<li><a href="#">Join us</a></li>
+					<li>
+						<? include "top_login1.php"; ?>
+					</li>
+				</ul>
+
+				<div id="hamburger_icon">
+					<span></span> <span></span> <span></span>
+				</div>
+
+			</div>
+		</nav>
+
+
+		<nav id="t_menu">
+			<div id="menubox">
+				<div class="menubox">
+					<ul class="n1">
+						<li><a href="#">Philosophy</a></li>
+						<li><a href="#">Event/Promotion</a></li>
+					</ul>
+
+					<ul class="n2">
+						<li><a href="#">New</a></li>
+						<li><a href="#">Best</a></li>
+						<li><a href="#">Outer</a></li>
+						<li><a href="#">Top</a></li>
+						<li><a href="#">Bottom</a></li>
+						<li><a href="#">Dress</a></li>
+						<li><a href="#">Bag/Accessory</a></li>
+					</ul>
+
+					<ul class="n3">
+						<li><a href="#">Best</a></li>
+						<li><a href="#">Outer</a></li>
+						<li><a href="#">Top</a></li>
+						<li><a href="#">Bottom</a></li>
+						<li><a href="#">Dress</a></li>
+						<li><a href="#">Bag/Accessory</a></li>
+					</ul>
+
+					<ul class="n4">
+						<li><a href="#">All</a></li>
+						<li><a href="#">2023</a></li>
+						<li><a href="#">2022</a></li>
+						<li><a href="#">2021</a></li>
+						<li><a href="#">2020</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<nav id="m_menu">
+		<div class="head">
+			<button class="cross">&#735;</button>
+			<ul class="cf">
+				<li class="fr"><a href="#">LOGIN</a></li>
+				<li><a href="#">JOIN</a></li>
+			</ul>
+		</div>
+
+		<ul class="menu-list">
+			<li id="nav1" class="accordion-toggle">
+				<a class="menu-link" href="#">BRAND</a>
+				<ul class="menu-submenu">
+					<li><a href="#">Philosophy</a></li>
+					<li><a href="#">Event/Promotion</a></li>
+				</ul>
+			</li>
+
+			<li id="nav2" class="accordion-toggle">
+				<a class="menu-link" href="#">PRODUCT</a>
+				<ul class="menu-submenu">
+					<li><a href="#">New</a></li>
+					<li><a href="#">Best</a></li>
+					<li><a href="#">Outer</a></li>
+					<li><a href="#">Top</a></li>
+					<li><a href="#">Bottom</a></li>
+					<li><a href="#">Dress</a></li>
+					<li><a href="#">Bag/Accessory</a></li>
+				</ul>
+			</li>
+			
+
+			<li id="nav3" class="accordion-toggle">
+				<a class="menu-link" href="#">OUTLET</a>
+				<ul class="menu-submenu">
+					<li><a href="#">New</a></li>
+					<li><a href="#">Best</a></li>
+					<li><a href="#">Outer</a></li>
+					<li><a href="#">Top</a></li>
+					<li><a href="#">Bottom</a></li>
+					<li><a href="#">Dress</a></li>
+					<li><a href="#">Bag/Accessory</a></li>
+				</ul>
+			</li>
+			
+
+			<li id="nav4" class="accordion-toggle">
+				<a class="menu-link" href="#">COLLECTION</a>
+				<ul class="menu-submenu">
+					<li><a href="#">All</a></li>
+					<li><a href="#">2023</a></li>
+					<li><a href="#">2022</a></li>
+					<li><a href="#">2021</a></li>
+					<li><a href="#">2020</a></li>
+				</ul>
+			</li>
+			
+		</ul>
+	</nav>
+
+
+	<main id="fullpage">
+		<section class="section" id="section1">
+			<div class="slide" id="slide1-1">
+				<div class="text">
+					<img src="imgs/mainlogo2.png" alt="">
+					<div class="button">
+						<a href="#">NEW ARRIVAL</a>
+						<a>BEST ITEM</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section" id="section2">
+			<div class="slide" id="slide2-1">
+                <div class="text2">
+				<p>기다려온 <span >겨울</span></p>
+				<p class="test">WINTER COLLECTION VOL1</p>
+			</div>
+
+
+			<div class="slide" id="slide2-2">
+				<ul class="slidewrap cf">
+					<li>
+						<div class="product_text">
+							<p class="product"><a href="#">LABEL POINT CASUAL JACKET</a></p>
+							<p class="more"><a href="#">more</a></p>
+							<p class="product"><a href="#">MESH BLOCK LONGSLEEVE SLIM T-SHIRT</a></p>
+							<p class="more"><a href="#">more</a></p>
+						</div>
+						<img src="imgs/1-1.jpg" alt="">
+					</li>
+
+					<li>
+						<div class="product_text">
+							<p class="product"><a href="#">PUMPKIN MINI SKIRT</a></p>
+							<p class="more"><a href="#">more</a></p>
+						</div>
+						<img src="imgs/1-2.jpg" alt="">
+					</li>
+
+				</ul>
+			</div>
+
+
+			<div class="slide" id="slide2-3">
+				<ul class="slidewrap cf">
+					<li>
+						<div class="product_text">
+							<p class="product"><a href="#">STITCH GOOSE DOWN JACKET</a></p>
+							<p class="more"><a href="#">more</a></p>
+							<p class="product"><a href="#">STITCH PADDING MINI SKIRT</a></p>
+							<p class="more"><a href="#">more</a></p>
+						</div>
+						<img src="imgs/2-1.jpg" alt="">
+					</li>
+
+					<li>
+						<div class="product_text">
+							<p class="product"><a href="#">POPEN COLLAR ZIPPER CARDIGAN</a></p>
+							<p class="more"><a href="#">more</a></p>
+							<p class="product"><a href="#">QUILTING HOBO BAG</a></p>
+							<p class="more"><a href="#">more</a></p>
+						</div>
+						<img src="imgs/2-2.jpg" alt="">
+					</li>
+
+				</ul>
+			</div>
+
+
+			<div class="slide" id="slide2-4">
+				<ul class="slidewrap cf">
+					<li>
+						<div class="product_text">
+							<p class="product"><a href="#">TOGGLE HANDMADE JACKET</a></p>
+							<p class="more"><a href="#">more</a></p>
+							<p class="product"><a href="#">CABLE KNIT VEST</a></p>
+							<p class="more"><a href="#">more</a></p>
+						</div>
+						<img src="imgs/3-1.jpg" alt="">
+					</li>
+
+					<li>
+						<div class="product_text">
+							<p class="product"><a href="#">CABLE KNIT SKIRT </a></p>
+							<p class="more"><a href="#">more</a></p>
+
+						</div>
+						<img src="imgs/3-2.jpg" alt="">
+					</li>
+
+				</ul>
+			</div>
+
+
+
+			<div class="slide" id="slide2-5">
+				<ul class="slidewrap cf">
+					<li>
+						<div class="product_text">
+							<p class="product"><a href="#">STAND COLLAR OVERFIT CROP JACKET</a></p>
+							<p class="more"><a href="#">more</a></p>
+							<p class="product"><a href="#">POINT LETTERIN PULL OVER
+								</a></p>
+							<p class="more"><a href="#">more</a></p>
+						</div>
+						<img src="imgs/4-1.jpg" alt="">
+					</li>
+
+					<li>
+						<div class="product_text">
+							<p class="product"><a href="#">ECO LEATHER SHORT PANTS</a></p>
+							<p class="more"><a href="#">more</a></p>
+						</div>
+						<img src="imgs/4-2.jpg" alt="">
+					</li>
+
+				</ul>
+			</div>
+
+
+		</section>
+
+
+
+		<section class="section" id="section3">
+			<div class="slide" id="slide3-1">
+				<div class="collection2 ">
+
+					<p><span>이</span><span class="test">계절</span>을 즐길 때</p>
+					<p>WINTER COLLECTION VOL2</p>
+				</div>
+			</div>
+
+		</section>
+
+		<section class="section" id="section4">
+			<div class="slide" id="slide4-1">
+				<ul class="cf">
+					<li class="box-hover"><img src="imgs/4_1.jpg" alt=""></li>
+					<li class="box-hover"><img src="imgs/4_3.jpg" alt=""></li>
+				</ul>
+			</div>
+
+		</section>
+
+
+		<section class="section" id="section5">
+			<div class="slide" id="slide5-1">
+				<ul class="instatext">
+					<li><a href="">FOLLOW @it MISHHA on instagram</a></li>
+					<li><a href=""><i class=" xi-instagram"></i></a></li>
+				</ul>
+
+				<ul class="instaimage">
+					<li><img src="imgs/insta1.jpg" alt="인스타이미지"></li>
+					<li><img src="imgs/insta3.jpg" alt="인스타이미지"></li>
+					<li><img src="imgs/insta6.jpg" alt="인스타이미지"></li>
+					<li><img src="imgs/insta4.jpg" alt="인스타이미지"></li>
+				</ul>
+			</div>
+
+		</section>
+
+
+		<footer class="section fp-auto-height" id="section6">
+			<div class="footerwrapper cf">
+				<div class="customer">
+					<img src="imgs/mainlogo.png" alt="">
+					<ul>
+						<li>고객센터 1644-0107</li>
+						<li>평일 9:30-17:00</li>
+						<li>점심 12:30-13:30</li>
+						<li>(주말 및 공휴일 휴무)</li>
+					</ul>
+				</div>
+
+
+				<div class="outer">
+					<ul class="nav1">
+						<li>시선인터내셔널 대표: 신완철&nbsp;&nbsp;&nbsp;주소: 서울시 강남구 테헤란로 34길 6 태광타워&nbsp;&nbsp;&nbsp;사업자등록번호:
+							214-81-98102</li>
+						<li>통신판매업신고:제 2016-서울-강남-03574호&nbsp;&nbsp;&nbsp;이메일: cs@sisun.com &nbsp;&nbsp;&nbsp;팩스: 02-523-6253
+						</li>
+						<li>2020 SISUN.COM All Rights Reserved</li>
+					</ul>
+				</div>
+
+
+
+				<div class="menuwrap">
+					<ul class="nav4">
+						<li>고객서비스</li>
+						<li><a href="#">매장찾기</a></li>
+						<li><a href="#">공지</a></li>
+						<li><a href="#">등급별 회원혜택</a></li>
+					</ul>
+
+					<ul class="nav5">
+						<li>문의</li>
+						<li><a href="#">주문배송 조회</a></li>
+						<li><a href="#">교환반품 신청</a></li>
+						<li><a href="#">자주 묻는 질문</a></li>
+					</ul>
+
+					<ul class="nav6">
+						<li>이용약관</li>
+						<li><a href="#">개인정보처리방침</a></li>
+						<li><a href="#">사업자정보확인</a></li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+	</main>
+
+
+
+
+
+</body>
+
+</html>
