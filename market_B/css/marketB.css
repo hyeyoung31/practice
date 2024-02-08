@@ -151,12 +151,11 @@ form {
 }
 
 
-
-/* 메인배너 */
-#banner_pc {
-  position: relative;
+main {position:relative;
   top:180px;
 }
+/* 메인배너 */
+
 
 .slide_banner img {
   width:100%;
@@ -200,6 +199,8 @@ form {
 .slide_banner button.slick-next:before {
   content: "\e940";
 }
+
+
 .slick-dots {
   position: absolute;
   bottom: 1.5rem;
@@ -227,21 +228,96 @@ form {
   background: rgba(0, 0, 0, 1);
 }
 
-#iconmenu {width:100%; height:220px;margin:50px auto 0; box-sizing: border-box; padding:170px 0; }
-#iconmenu ul {text-align:center; width:85%;display:flex; margin:0 auto;}
-#iconmenu ul li {width:100%;}
-#iconmenu ul li img {width:60%;}
-#iconmenu ul li a{font-weight: 500; font-size:0.7rem;}
-#iconmenu ul li span {display:block;margin:9px auto;}
-#iconmenu ul li:last-child {margin-right:0;}
+#banner_pc{
+  position:relative;
+}
+
+.button {
+  position:absolute;
+  bottom:18px;
+  right:100px;
+
+}
+button.play {
+  width: 35px;
+  height: 35px;
+  font-size: 0;
+  background: transparent;
+  text-align: center;
+  border: none;
+}
+
+button.play:before {
+  content: "\ea3e";
+  font-family: "xeicon";
+  color: #333;
+  font-size: 1.6rem;
+}
+
+button.pause {
+  width: 35px;
+  height: 35px;
+  font-size: 0;
+  background: transparent;
+  text-align: center;
+  border: none;
+}
+
+button.pause:before {
+  content: "\ea3b";
+  font-family: "xeicon";
+  color: #333;
+  font-size: 1.6rem;
+}
+
+button:hover {
+  cursor: pointer;
+}
 
 
+/* 아이콘메뉴 */
+
+
+
+#iconmenu {
+padding-top: 60px;
+
+}
+
+#iconmenu ul {
+  text-align: center;
+  width: 85%;
+  display: flex;
+  margin: 0 auto;
+}
+
+#iconmenu ul li {
+  width: 100%;
+}
+
+#iconmenu ul li img {
+  width: 60%;
+}
+
+#iconmenu ul li a {
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+
+#iconmenu ul li span {
+  display: block;
+  margin: 10px auto;
+}
+
+#iconmenu ul li:last-child {
+  margin-right: 0;
+}
 .nav {
   padding:10px 0;
   border-bottom: 2px solid rgba(55,55,55,1);
 }
 #tab_wrapper {
-  width: 85%; margin:50px auto;
+  width: 85%; margin:120px auto;
 }
 
 .tab_menu {
@@ -274,11 +350,11 @@ form {
 
 .tbtn li a {
   border-radius: 50px;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   text-align: center;
   padding: 0.5rem 1.3rem;
   border: 2px solid #ebebebfc;
-    box-shadow:  0 2px 2px rgba(0,0,0, 0.3);
+    box-shadow:  0 2px 2px rgba(0,0,0, 0.2);
 }
 
 
@@ -296,6 +372,3 @@ form {
   width: 100%;
 }
 
-.blank {
-  height:1
-}
