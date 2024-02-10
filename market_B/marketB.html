@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/marketB.css">
   <script src="js/jquery-1.11.2.min.js"></script>
+ <script src="js/swiper.min.js"></script>
+  <link rel="stylesheet" href="css/swiper.min.css">
   <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
   <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
   <script src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
@@ -18,76 +20,112 @@
 
   </style>
   <script>
-    $(function () {
-
-      $(".slide_banner").slick({
-        dots: true,
-        autoplay: true,
-        infinite: true,
-        autoplaySpeed: 4000,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-      });
-
-    });
-
-  </script>
+  
 </head>
 
 <body>
-  <div id="header">
-    <div class="header-container">
-      <div class="head cf:after">
-        <h2> <img src="image/logo.png" alt=""> </h2>
+ <header>
+
+      <div class="head">
+        <h1 class="ci"><a>마켓비</a></h1>
         <div class="search">
           <form class=method="post" action="send-searchl.php">
             <input type="text" id="search" placeholder="검색어를 입력해주세요">
           </form>
         </div>
       </div>
-      <div class="gnb">
-        <div id="hamburger-menu">
-          <span></span> <span></span> <span></span>
+  
+  </header>
+  
+  <nav class="gnb_pc">
+  <ul class="head_list">
+    <li><a href="#">제품</a></li>
+    <li><a href="#">베스트</a></li>
+    <li><a href="#">기획전</a></li>
+    <li><a href="#">세일</a></li>
+  </ul>
+</nav>
+
+
+  <main>
+   <div class="pc_mainbanner">
+      <div class="swipe_main_banner" id="swipe_main_banner">
+        <div class="swipe_banner_all" id="swipe_banner_all">
+          <div class="swiper-wrapper">
+  
+            <div class="swiper-slide">
+              <a href="#">
+                <img src="http://placehold.it/1920x450" style="position:relative;">
+                <div class="main_text">
+                  <div><strong class="banner_main_tit ">모두 각자 빛나는 취향</strong></div>
+                  <div><span class="banner_sub_tit ">조명으로 감성취향 on</span></div>
+                  <div><span class="banner_date_tit ">02.01 - 02.12</span></div>
+                </div>
+              </a>
+            </div>
+  
+            <div class="swiper-slide">
+              <a href="#">
+                <img src="http://placehold.it/1920x450" tyle="position:relative;">
+              </a>
+            </div>
+  
+            <div class="swiper-slide">
+              <a href="#">
+                <img src="http://placehold.it/1920x450" tyle="position:relative;">
+              </a>
+            </div>
+  
+          </div>
+  
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
+          <div class="swiper-progressbar"></div>
+  
+          <!-- Add Arrow -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
         </div>
-        <ul>
-          <li><a href="index.html">제품</a></li>
-          <li><a href="index.html">베스트</a></li>
-          <li><a href="workportfolio.html">기획전</a></li>
-          <li><a href="workportfolio.html">세일</a></li>
-        </ul>
       </div>
     </div>
-  </div>
-
-
-<!-- 
-
-  <div id="banner_pc">
-    <ul class="slide_banner">
-      <li class="slick-slide"><a href="#"> <img src="image/banner.png" alt=""></a></li>
-      <li class="slick-slide"><a href="#"> <img src="image/banner.png" alt=""></a></li>
-      <li class="slick-slide"><a href="#"> <img src="image/banner.png" alt=""></a></li>
-      <li class="slick-slide"><a href="#"> <img src="image/banner.png" alt=""></a></li>
-      <li class="slick-slide"><a href="#"> <img src="image/banner.png" alt=""></a></li>
-    </ul>
-  </div> -->
-
   
-  <main>
-  <div id="banner_pc">
-    <ul class="slide_banner">
-      <li class="slick-slide"><a href="#"> <img src="http://placehold.it/1920x650" alt=""></a></li>
-      <li class="slick-slide"><a href="#"> <img src="http://placehold.it/1920x650" alt=""></a></li>
-      <li class="slick-slide"><a href="#"> <img src="http://placehold.it/1920x650" alt=""></a></li>
-      <li class="slick-slide"><a href="#"> <img src="http://placehold.it/1920x650" alt=""></a></li>
-      <li class="slick-slide"><a href="#"> <img src="http://placehold.it/1920x650" alt=""></a></li>
-    </ul>
+    <script>
 
-   <div class="button">
-    <button class="play">시작</button>
-    <button class="pause">정지</button>
-   </div>
- </div>
+      var totalSlide = $('#swipe_main_banner .swiper-wrapper .swiper-slide').length;
+      var fragment = document.querySelector('#swipe_main_banner .swiper-pagination');
+      fragment.innerHTML = ('<span style="color:white;">' + 1 + '</span> <span class="mainbanner_bar"></span> ' + totalSlide);
+
+      var swiper = new Swiper('#swipe_banner_all', {
+        // Optional parameters
+        slidesPerView: 1,
+        spaceBetween: 30,
+        centeredSlides: true,
+        loop: true,
+        loopedSLides: 3,
+        simulateTouch: true,
+        grabCursor: true,
+        speed: 800,
+        loopAdditionalSlides: 1,
+        pagination: {
+          el: '.swiper-progressbar',
+          type: 'progressbar'
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        autoplay: {
+          delay: 3500,
+          disableOnInteraction: false,
+        },
+        on: {
+          slideChange: function () {
+            fragment.innerHTML = ('<span style="color:white;">' + (this.realIndex + 1) + '</span> <span class="mainbanner_bar"></span> ' + totalSlide);
+          }
+        }
+      });
+
+    </script>
 
   <section id="iconmenu">
     <ul>
