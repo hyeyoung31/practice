@@ -229,3 +229,71 @@ padding-top: 60px;
   width: 100%;
 }
 
+
+footer {
+  height:180px;
+  background:#454545;
+  font-size:0.7rem;
+  color:#fff;
+  line-height:1.13rem;
+}
+
+.footer_wrapper{
+  width:80%;
+  height:100%;
+  margin:0 auto;
+  position:relative;
+  padding: 50px 0;
+}
+
+.footer_wrapper li {
+  float: left;
+}
+
+.footer_wrapper li::before{
+  content: "|";
+  padding:0 6px;
+  
+}
+
+.footer_wrapper li:nth-child(1)::before{
+  display:none;
+}
+
+.fmenu {
+  position:absolute;
+  right:0;
+  padding: 14px 0 0;
+}
+
+.fmenu p {
+  font-weight: 500;
+}
+.finfo {
+  position:absolute;
+  left:0;
+}
+
+
+.finfo h2 {
+  display: block;
+  font-size: 0;
+  line-height: 0;
+}
+
+.finfo h2 a {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  width: 100px;
+  height: 30px;
+  background: url(../image/logo.png) no-repeat;
+  background-size: 100%;
+  font-size: 0;
+  line-height: 0;
+  text-indent: -100000px;
+}
+
+address {
+  font-style: normal;
+}
