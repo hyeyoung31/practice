@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/member.css">
+</head>
+<body>
+
+
+  <form  name="member_form" method="post" action="insert.php"> 
+	
+    <div id="form_join">
+      <head>
+      <h1>it MICHAA</h1>
+   
+     </head>
+   
+     <p>회원가입 정보를 입력하세요</p>
+     <hr>
+       <label for="id1"><b>아이디</b></label>
+
+       <div id="id">
+         <input type="text" id="id1">
+         <button type="button" class="idcheck">중복확인</button>
+      </div>
+
+      <label for="psw"><b>비밀번호</b></label>
+      <input type="password" placeholder="5~8자리 영문,숫자, 특수기호를 반드시 포함해주세요." name="psw" id="psw" required>
+  
+      <label for="psw-repeat"><b>비밀번호확인</b></label>
+      <input type="password" placeholder="비밀번호와 동일하게 입력해주세요." name="psw-repeat" id="psw-repeat" required>
+ 
+      <label for="name"><b>이름</b></label>
+      <input type="text" name="name" id="name" required>
+
+      <label for="address"><b>주소</b></label>
+      <input type="text" name="address" id="address" required>
+      
+      <hr>
+      <label for="email"><b>Email</b></label>
+      <input type="text"  name="email" id="email" required>
+
+    
+      <button type="submit" class="registerbtn">회원가입</button>
+    </div>
+  
+    <div class="container signin">
+      <p>이미 계정이 있나요? <a href="#">로그인</a>.</p>
+    </div>
+  </form>
+
+  </body>
+  </html>
