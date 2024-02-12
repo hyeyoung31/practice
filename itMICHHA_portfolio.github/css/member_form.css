@@ -1,0 +1,125 @@
+@charset "utf-8";
+
+* {box-sizing: border-box}
+
+body {font-size:0.8rem;}
+h1 {
+	text-align: center;
+	/* padding: 50px 0; */
+}
+
+#form_mem{
+  margin: 50px auto;
+  width:80%;
+  border:1px solid red;
+}
+
+head {margin-bottom:20px;}
+#form_mem p {margin-top:10px; text-align:center;}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+input[type=text], input[type=password],input[type=tel] {
+  width: 100%;
+  display: inline-block;
+  padding: 12px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus,input[type=tel]:focus
+ {
+  background-color: #ddd;
+  outline: none;
+}
+
+
+.registerbtn {
+  background-color: #000;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+#id {display:flex; width: 100%; }
+/* input[type=text]:nth-child(1) {width:50%;} */
+#id1 {
+	width: 80%;
+  }
+  
+.idcheck{
+  background-color: #000;
+  color: white;
+  border: none;
+  cursor: pointer;
+  opacity: 0.9;
+  width:20%;
+  font-size: 0.8rem;
+  height:39px;
+  margin-left:5px;
+  position:relative; top:5px;
+}
+
+.registerbtn:hover {
+  opacity:1;
+}
+
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+  margin:10px 0;
+  padding:15px 0;
+}
+@media screen and (min-width:451px) {
+
+		#form_mem {
+			width: 70%;
+		}
+
+	}
+
+
+@media screen and (min-width:800px) {
+
+		#form_mem {
+			width: 50%;
+		}
+
+	}
+	
+
+	
+
+@media screen and (min-width:1200px) {
+body {
+		font-size: 1rem;
+	}
+
+	input[type=text],
+	input[type=password],
+	input[type=tel] {
+
+		padding: 15px;
+		/* margin: 5px 0 22px 0;
+	border: none;
+	background: #f1f1f1; */
+	}
+
+	#form_mem {
+		margin: 50px auto;
+		width: 40%;
+	}
+
+	.idcheck{
+	
+		height:45px;
+	  }
+}
