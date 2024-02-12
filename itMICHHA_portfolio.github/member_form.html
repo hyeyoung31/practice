@@ -1,57 +1,52 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML5</title>
+    <title>Document</title>
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/member.css">
+    <link rel="stylesheet" href="css/member_form.css">
 </head>
 <body>
+        <div id="form_mem">  
+        <h1>it MICHAA</h1>
+          <p>회원가입 정보를 입력하세요</p>
+          <hr>
 
+        <form  name="member_form" method="post" action="insert.php"> 
 
-  <form  name="member_form" method="post" action="insert.php"> 
-	
-    <div id="form_join">
-      <head>
-      <h1>it MICHAA</h1>
+        <label for="id1"><b>아이디</b></label>
+        <div id="id">
+        <input type="text" id="id1" name="id" required>
+        <button type="button" class="idcheck">중복확인</button>
+         </div>
+
+        <label for="psw"><b>비밀번호</b></label>
+        <input type="password" placeholder="5~8자리 영문,숫자, 특수기호를 반드시 포함해주세요." name="psw" id="psw" required>
+        <label for="psw-repeat"><b>비밀번호확인</b></label>
+        <input type="password" placeholder="비밀번호와 동일하게 입력해주세요." name="pass_confirm" id="psw-repeat" required>
+
+        <label for="name"><b>이름</b></label>
+        <input type="text" name="name" id="name" required>
+
+         <label for="phone"><b>전화번호</b></label>
+         <input type="tel"  name="hp" id="phone" required>
+
+         <label for="email"><b>Email</b></label>
+       <input type="text"  name="email" id="email" required>
+
    
-     </head>
-   
-     <p>회원가입 정보를 입력하세요</p>
-     <hr>
-       <label for="id1"><b>아이디</b></label>
+        <button type="submit" class="registerbtn">회원가입</button>
+		
 
-       <div id="id">
-         <input type="text" id="id1">
-         <button type="button" class="idcheck">중복확인</button>
-      </div>
+	    </form>
 
-      <label for="psw"><b>비밀번호</b></label>
-      <input type="password" placeholder="5~8자리 영문,숫자, 특수기호를 반드시 포함해주세요." name="psw" id="psw" required>
-  
-      <label for="psw-repeat"><b>비밀번호확인</b></label>
-      <input type="password" placeholder="비밀번호와 동일하게 입력해주세요." name="psw-repeat" id="psw-repeat" required>
- 
-      <label for="name"><b>이름</b></label>
-      <input type="text" name="name" id="name" required>
+        <div class="container signin">
+       <p>이미 계정이 있나요? <a href="#">로그인</a>.</p>
+        </div>
+	    </div>
 
-      <label for="address"><b>주소</b></label>
-      <input type="text" name="address" id="address" required>
-      
-      <hr>
-      <label for="email"><b>Email</b></label>
-      <input type="text"  name="email" id="email" required>
+		
 
-    
-      <button type="submit" class="registerbtn">회원가입</button>
-    </div>
-  
-    <div class="container signin">
-      <p>이미 계정이 있나요? <a href="#">로그인</a>.</p>
-    </div>
-  </form>
-
-  </body>
-  </html>
+</body>
+</html>
