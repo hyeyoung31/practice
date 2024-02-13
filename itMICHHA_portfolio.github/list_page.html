@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+
+    <html lang="ko">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>it MICHHA </title>
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/list_page.css">
+        <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/menu.css">
+        <link rel="stylesheet" href="css/animation.css">
+        <script src="js/jquery-1.11.2.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="js/menu.js"></script>
+        <script>
+            $(function () {
+                $(".search li").on("click", function (e) {
+                    e.preventDefault();
+                    const a = $(this).attr("class");
+                    const result = a.substr(4, 1);
+                    const sort = $("#content ul li").sort(function (a, b) {
+                        if (result == 0) {
+                            return new Date($(a).find("span.date").text()) >
+                                new Date($(b).find("span.date").text()) ? -1 :
+                                new Date($(a).find("span.date").text()) <
+                                    new Date($(b).find("span.date").text()) ? 1 : 0;
+                        } else if (result == 1) {
+                            return parseInt($(a).find("span.price").text().replace(/[^0-9]/g, '')) >
+                                parseInt($(b).find("span.price").text().replace(/[^0-9]/g, '')) ? -1 :
+                                parseInt($(a).find("span.price").text().replace(/[^0-9]/g, '')) <
+                                    parseInt($(b).find("span.price").text().replace(/[^0-9]/g, '')) ? 1 : 0;
+                        } else {
+                            return parseInt($(a).find("span.price").text().replace(/[^0-9]/g, '')) <
+                                parseInt($(b).find("span.price").text().replace(/[^0-9]/g, '')) ? -1 :
+                                parseInt($(a).find("span.price").text().replace(/[^0-9]/g, '')) >
+                                    parseInt($(b).find("span.price").text().replace(/[^0-9]/g, '')) ? 1 : 0;
+                        }
+                    });
+                    $("#content ul").html(sort);
+                });
+                $(".date").css("display", "none")
+            });
+
+        </script>
+    </head>
+
+    <body>
+
+        <header id="allmenu">
+            <nav id="header">
+                <div class="header-container cf">
+                    <ul id="pc_gnb">
+                        <li><a href="#">BRAND</a></li>
+                        <li><a href="#">PRODUCT</a></li>
+                        <li><a href="#">OUTLET</a></li>
+                        <li><a href="#">COLLECTION</a></li>
+                    </ul>
+
+                    <ul class="icon cf">
+                        <li><a href="#"><i class="xi-search"></i></a></li>
+                        <li><a href="#">Cart</a></li>
+                        <li><a href="#">Join us</a></li>
+                        <li><a href="member.html">Log in</a></li>
+                        <li><a href="index.html">Home</a></li>
+                    </ul>
+
+                    <div id="hamburger_icon">
+                        <span></span> <span></span> <span></span>
+                    </div>
+
+                </div>
+            </nav>
+
+
+            <nav id="t_menu">
+                <div id="menubox">
+                    <div class="menubox">
+                        <ul class="n1">
+                            <li><a href="#">Philosophy</a></li>
+                            <li><a href="#">Event/Promotion</a></li>
+                        </ul>
+
+                        <ul class="n2">
+                            <li><a href="#">New</a></li>
+                            <li><a href="#">Best</a></li>
+                            <li><a href="#">Outer</a></li>
+                            <li><a href="#">Top</a></li>
+                            <li><a href="#">Bottom</a></li>
+                            <li><a href="#">Dress</a></li>
+                            <li><a href="#">Bag/Accessory</a></li>
+                        </ul>
+
+                        <ul class="n3">
+                            <li><a href="#">Best</a></li>
+                            <li><a href="#">Outer</a></li>
+                            <li><a href="#">Top</a></li>
+                            <li><a href="#">Bottom</a></li>
+                            <li><a href="#">Dress</a></li>
+                            <li><a href="#">Bag/Accessory</a></li>
+                        </ul>
+
+                        <ul class="n4">
+                            <li><a href="#">All</a></li>
+                            <li><a href="#">2023</a></li>
+                            <li><a href="#">2022</a></li>
+                            <li><a href="#">2021</a></li>
+                            <li><a href="#">2020</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <nav id="m_menu">
+            <div class="head">
+                <button class="cross">&#735;</button>
+                <ul class="cf">
+                    <li class="fr"><a href="member.html">LOGIN</a></li>
+                    <li><a href="#">JOIN</a></li>
+                </ul>
+            </div>
+
+            <ul class="menu-list">
+                <li id="nav1" class="accordion-toggle">
+                    <a class="menu-link" href="#">BRAND</a>
+                    <ul class="menu-submenu">
+                        <li><a href="#">Philosophy</a></li>
+                        <li><a href="#">Event/Promotion</a></li>
+                    </ul>
+                </li>
+
+                <li id="nav2" class="accordion-toggle">
+                    <a class="menu-link" href="#">PRODUCT</a>
+                    <ul class="menu-submenu">
+                        <li><a href="#">New</a></li>
+                        <li><a href="#">Best</a></li>
+                        <li><a href="#">Outer</a></li>
+                        <li><a href="#">Top</a></li>
+                        <li><a href="#">Bottom</a></li>
+                        <li><a href="#">Dress</a></li>
+                        <li><a href="#">Bag/Accessory</a></li>
+                    </ul>
+                </li>
+
+
+                <li id="nav3" class="accordion-toggle">
+                    <a class="menu-link" href="#">OUTLET</a>
+                    <ul class="menu-submenu">
+                        <li><a href="#">New</a></li>
+                        <li><a href="#">Best</a></li>
+                        <li><a href="#">Outer</a></li>
+                        <li><a href="#">Top</a></li>
+                        <li><a href="#">Bottom</a></li>
+                        <li><a href="#">Dress</a></li>
+                        <li><a href="#">Bag/Accessory</a></li>
+                    </ul>
+                </li>
+
+
+                <li id="nav4" class="accordion-toggle">
+                    <a class="menu-link" href="#">COLLECTION</a>
+                    <ul class="menu-submenu">
+                        <li><a href="#">All</a></li>
+                        <li><a href="#">2023</a></li>
+                        <li><a href="#">2022</a></li>
+                        <li><a href="#">2021</a></li>
+                        <li><a href="#">2020</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+        </nav>
+
+
+        <main>
+            <section id="list">
+                <div class="search_wrapper">
+                <ul class="search cf">
+                    <li class="case0">최신순</li>
+                    <li class="case1">높은가격</li>
+                    <li class="case2">낮은가격</li>
+                </ul>
+               </div>
+
+            <div id="content" class="cf">
+                <ul class="image cf">
+                     <li class="fadeInUp animated" ><a href="#"><img src="imgs/outer_img5.jpg" alt="" /></a>
+                        <span class="nn"><a href="#">스탠드 카라 오버핏 크롭 울 자켓</a></span>
+                        <span class="date">2023.10.31</span>
+                        <span class="price">24,4300원</span>
+                    </li>
+                    <li class="fadeInUp animated"><a href="#"><img src="imgs/top_img4.jpg" alt="" /></a>
+                        <span class="nn"><a href="#">포인트 레터링 풀오버</a></span>
+                        <span class="date">2023.10.27</span>
+                        <span class="price">17,9100원</span>
+                    </li>
+                    <li class="fadeInUp animated"><a href="#"><img src="imgs/skirt_img5.jpg" alt="" /></a>
+                        <span class="nn"><a href="#">에코레더 숏팬츠</a></span>
+                        <span class="date">2023.10.29</span>
+                        <span lass="price">17,9000원</span>
+                    </li>
+                    <li class="fadeInUp animated"><a href="#"><img src="imgs/outer_img6.jpg" alt="" /></a>
+                        <span class="nn"><a href="#">테일러드 버튼업 헤링본 핸드메이드 코트</a></span>
+                        <span class="date">2023.10.30</span>
+                        <span class="price">37,0300원</span>
+                    </li>
+                    <li class="fadeInUp animated"><a href="#"><img src="imgs/dress_img2.jpg" alt="" /></a>
+                        <span class="nn"><a href="#">글리터 트위드 원피스</a></span><span class="date">2023.10.28</span>
+                        <span class="price">26,5300원</span>
+                    </li>
+
+
+
+                    <li class="fadeInUp animated"><a href="#"><img src="imgs/top_img2.jpg" alt="" /></a>
+                        <span class="nn"><a href="#">캐시미어 블랜드 홀가먼트 니트탑 </a></span><span class="date">2023.10.30</span>
+                        <span class="price">189,000원</span>
+                    </li>
+                    <li class="fadeInUp animated"><a href="#"><img src="imgs/skirt_img3.jpg" alt="" /></a>
+                        <span class="nn"><a href="#">셔링 절개 미니 스커트 </a></span><span class="date">2023.10.29</span>
+                        <span class="price">189,000원</span>
+                    </li>
+                    <li class="fadeInUp animated"> <a href="#"><img src="imgs/outer_img4.jpg" alt="" /></a>
+                        <span class="nn"><a href="#">토글 핸드메이드 자켓 </a></span><span class="date">2023.10.15</span>
+                        <span class="price">279,3000원</span>
+                    </li>
+                    <li class="fadeInUp animated"><a href="#"><img src="imgs/skirt_img4.jpg" alt="" /></a>
+                        <span class="nn"><a href="#">케이블 변형 스커트</a></span><span class="date">2023.10.17</span>
+                        <span class="price">10,3200원</span>
+                    </li>
+                    <li class="fadeInUp animated"><a href="#"><img src="imgs/top_img3.jpg" alt="" /></a>
+                        <span class="nn"><a href="#">케이블 니트 베스트</a></span><span class="date">2023.10.19</span>
+                        <span class="price">7,9200원</span>
+                    </li>
+
+
+                    <li class="fadeInUp animated"><a href="#"><img src="imgs/top_img1.jpg" alt="" /></a>
+                        <span class="nn"><a href="#">오픈카라 집업 가디건 </a></span><span class="date">2023.10.24</span>
+                        <span class="price">189,000원</span>
+                    </li>
+                    <li class="fadeInUp animated"><a href="#"><img src="imgs/outer_img1.jpg" alt="" /></a>
+                        <span class="nn"><a href="#">V자수 경량 구스다운 숏패딩 </a></span><span class="date">2023.10/.6</span>
+                        <span class="price">379,000원</span>
+                    </li>
+                    <li class="fadeInUp animated"><a href="#"><img src="imgs/skirt_img1.jpg" alt="" /></a>
+                        <span class="nn"><a href="#">미니 자수 패딩 스커트 </a></span><span class="date">2023.10.15</span>
+                        <span class="price">8,9300원</span>
+                    </li>
+                    <li class="fadeInUp animated"><a href="#"><img src="imgs/outer_img2.jpg" alt="" /></a>
+                        <span class="nn"><a href="#">멀티 컬러 트위드 크롭 자켓</a></span><span class="date">2023.10.14</span>
+                        <span class="price">27,9300원</span>
+                    </li>
+                    <li class="fadeInUp animated">
+                        <a href="#"><img src="imgs/outer_img3.jpg" alt="" /></a>
+                        <span class="nn"><a href="#">[SALE]라벨 포인트 울자켓 </a></span><span class="date">2023.10.13</span>
+                        <span class="price">34,3200원</span>
+                    </li>
+
+                    <li class="fadeInUp animated">
+                        <a href="#"><img src="imgs/pants_img1.jpg" alt="" /></a>
+                        <span class="nn"><a href="#">브 배기핏 데님팬츠 </a></span
+                        ><span class="date">2023.10.13</span>
+                        <span class="price">15,1200원</span>
+                    </li>  
+
+
+
+
+                </ul>
+
+            </div>
+        </section>
+        </main>
+
+
+    </body>
+
+    </html>
+
