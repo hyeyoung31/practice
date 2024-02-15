@@ -9,11 +9,11 @@
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/list_page.css">
         <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
-        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <link rel="stylesheet" href="css/menu.css">
         <link rel="stylesheet" href="css/animation.css">
         <script src="js/jquery-1.11.2.min.js"></script>
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+       <script src="js/sly.min.js"></script>
+        <script src="js/list_page.js"></script>
         <script src="js/menu.js"></script>
         <script>
             $(function () {
@@ -48,7 +48,7 @@
     </head>
 
     <body>
-
+      
         <header id="allmenu">
             <nav id="header">
                 <div class="header-container cf">
@@ -176,14 +176,52 @@
 
 
         <main>
-            <section id="list">
-                <div class="search_wrapper">
-                <ul class="search cf">
+            <nav id="Mtop_menu">
+              <h2>NEW</h2>
+              <div class="frame" id="basic1">
+                 <ul class="cf">
+                    <li>ALL</li>
+                    <li>OUTER</li>
+                    <li>TOP</li>
+                    <li>SKIRT</li>
+                    <li>PANTS</li>
+                    <li>DRESS</li>
+                    <li>BAG/ACCESSORY</li>
+                  </ul>
+                </div>
+             </nav>
+
+        <div id="Msearch_wrapper">
+            <ul class="search">
+                <li class="case0">최신순</li>
+                <li class="case1">높은가격</li>
+                <li class="case2">낮은가격</li>
+            </ul>
+        </div>
+            
+        <div id="Ptop_menu">
+            <div class="top_menu">
+                <h3>NEW</h3>
+                <ul class="cf">
+                    <li>ALL</li>
+                    <li>OUTER</li>
+                    <li>TOP</li>
+                    <li>SKIRT</li>
+                    <li>PANTS</li>
+                    <li>DRESS</li>
+                    <li>BAG/ACC</li>
+                </ul>
+            </div>
+
+            <div id="Psearch_wrapper">
+                <ul class="search">
                     <li class="case0">최신순</li>
                     <li class="case1">높은가격</li>
                     <li class="case2">낮은가격</li>
                 </ul>
-               </div>
+            </div>
+        </div>   
+              
 
             <div id="content" class="cf">
                 <ul class="image cf">
