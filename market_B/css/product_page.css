@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+}
+
+body * {
+    font-family: Pretendard;
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+    font-weight: 400;
+    color: #000;
+}
+
+body a {
+    text-decoration: none;
+
+}
+
+main {
+    margin-top: 150px;
+}
+
+section {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.item_photoinfo {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.image_wrapper {
+    width: 560px;
+
+}
+
+.small {
+    display: flex;
+    margin-top: 5px;
+}
+
+.small img {
+    margin-right: 13px;
+    vertical-align: top;
+}
+
+.small img:last-child {
+    margin-right: 0;
+}
+
+.information {
+    width: 45%;
+
+    padding: 15px 30px;
+    align-items: flex-end;
+}
+
+.information h3 {
+    font-size: 1.5rem;
+    padding: 15px 0;
+}
+
+.price {
+    padding: 15px 0;
+}
+
+.price li {
+    float: left;
+    font-size: 2rem;
+}
+
+
+.price li span {
+    text-decoration: line-through;
+}
+
+.delivery_wrapper {
+    padding: 15px 0;
+}
+
+.delivery li {
+    float: left;
+}
+
+.delivery li::after {
+    content: "|";
+    padding: 0 6px;
+}
+
+.delivery li:last-child::after {
+    display: none;
+}
+
+.button_wrapper {
+    width: 60%;
+
+}
+
+select {
+    margin: 5px 0;
+    height: 40px;
+    width: 60%;
+}
+
+button {
+    width: 40%;
+    font-size: 18px;
+    font-family: 'Pretendard-Bold';
+    display: inline-block;
+    height: 50px;
+    margin: 0 0 0 6px;
+    padding: 0 10px 0 10px;
+    color: #ffffff;
+    font-size: 16px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: -0.98px;
+}
+
+button.btn_cart {
+    border: 1px solid #767676;
+    background: #767676;
+
+}
+
+button.btn_add_order {
+    border: 1px solid #000;
+    background: #000;
+}
