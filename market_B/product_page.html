@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/product_page.css">
+</head>
+
+<body>
+
+    <header>
+
+        <div class="head">
+            <h1 class="ci"><a>마켓비</a></h1>
+            <div class="search">
+                <form class=method="post" action="send-searchl.php">
+                    <input type="text" id="search" placeholder="검색어를 입력해주세요">
+                </form>
+            </div>
+        </div>
+
+    </header>
+
+    <nav class="gnb_pc">
+        <ul class="head_list">
+            <li><a href="#">제품</a></li>
+            <li><a href="#">베스트</a></li>
+            <li><a href="#">기획전</a></li>
+            <li><a href="#">세일</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <div class="item_photoinfo">
+                <div class="image_wrapper">
+                    <img src="http://placehold.it/560x560">
+                    <div class="small">
+                        <img src="http://placehold.it/130x130">
+                        <img src="http://placehold.it/130x130">
+                        <img src="http://placehold.it/130x130">
+                        <img src="http://placehold.it/130x130">
+                    </div>
+                </div>
+
+
+
+
+                <div class="information">
+                    <h3>Lorem ipsum dolor sit amet consectetur</h3>
+                    <ul class="price cf">
+                        <li>58%</li>
+                        <li><span>285,900원</span></li>
+                        <li>148,200원</li>
+                    </ul>
+
+                    <hr>
+
+                    <div class="delivery_wrapper">
+                        <ul class="delivery cf">
+                            <li>택배배송</li>
+                            <li>3,000원</li>
+                            <li>우체국택배 </li>
+                        </ul>
+                        <p>50,000원 이상 결제 시 무료 배송</p>
+                    </div>
+
+                    <hr>
+
+                    <dl>
+                        <dt>옵션</dt>
+                        <dd>
+                            <select name="color">
+                                <option value="">--옵션 선택--</option>
+                                <option value="0">white</option>
+                                <option value="1">beige</option>
+                                <option value="2">black</option>
+                            </select>
+                        </dd>
+                    </dl>
+
+                    <dl>
+                        <dt>옵션추가</dt>
+                        <dd>
+                            <select name="color">
+                                <option value="">--옵션 추가--</option>
+                                <option value="0">서랍장</option>
+                                <option value="1">책꽂이</option>
+                                <option value="2">의자</option>
+                            </select>
+                        </dd>
+                    </dl>
+
+                    <hr>
+                    <form name="form" method="get">
+                        수량 : <input type="hidden" name="sell_price" value="148200">
+                        <input type="button" value=" - " onclick="del();">
+                        <input type="text" name="amount" value="1" size="2">
+                        <input type="button" value=" + " onclick="add();">
+                        <br>
+
+                    </form>
+                    <p id="price"></p>
+                    <hr>
+
+                    <div class="button_wrapper">
+                        <button type="button" class="btn_cart">장바구니</button>
+                        <button type="button" class="btn_add_order">바로 구매하기</button>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+    </main>
+
+</html>
