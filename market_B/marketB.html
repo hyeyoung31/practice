@@ -10,7 +10,9 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/marketB.css">
   <script src="js/jquery-1.11.2.min.js"></script>
- <script src="js/swiper.min.js"></script>
+  <script src="js/swiper.min.js"></script>
+  <script src="js/banner.js"></script>
+  <script src="js/marketB.js"></script>
   <link rel="stylesheet" href="css/swiper.min.css">
   <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
   <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
@@ -20,11 +22,16 @@
 
   </style>
   <script>
-  
+
+
+  </script>
 </head>
 
 <body>
- <header>
+
+  <header>
+
+    <div class="header">
 
       <div class="head">
         <h1 class="ci"><a>마켓비</a></h1>
@@ -34,28 +41,394 @@
           </form>
         </div>
       </div>
-  
+
+      <div class="head-gnb">
+        <!-- gnb menu-->
+        <div class="gnb-menu gnb-store">
+
+          <!-- 제품 메뉴 -->
+          <div class="category-menu">
+
+            <a class="menu-btn" href="#">제품</a>
+
+            <div class="menu-list">
+              <div class="ctr-list ctr-1">
+                <ul id="STORE_MENU">
+                  <!-- 가구 -->
+                  <li>
+                    <a href="#">가구<span class="emp"></span></a>
+                    <!-- 가구카테고리 2depth -->
+                    <div class="ctr-list ctr-2">
+                      <ul>
+                        <!-- 침대카테고리 -->
+                        <li>
+                          <a href="#">침대</a>
+                          <!-- 가구카테고리 3depth -->
+                          <div class="ctr-list ctr-3">
+                            <ul>
+                              <li>
+                                <a href="#">추천제품</a>
+                              </li>
+                              <li>
+                                <a href="#">온열침대</a>
+                              </li>
+                              <li>
+                                <a href="#">철제침대</a>
+                              </li>
+                              <li>
+                                <a href="#">원목침대</a>
+                              </li>
+                              <li>
+                                <a href="#">싱글침대</a>
+                              </li>
+                              <li>
+                                <a href="#">슈퍼싱글/더블침대</a>
+                              </li>
+                              <li>
+                                <a href="#">퀸/침대</a>
+                              </li>
+                              <li>
+                                <a href="#">데이베드/소파베드</a>
+                              </li>
+                              <li>
+                                <a href="#">이층/벙커 침대</a>
+                              </li>
+                              <li>
+                                <a href="#">유아동 침대</a>
+                              </li>
+                              <li>
+                                <a href="#">침대 테이블</a>
+                              </li>
+                              <li>
+                                <a href="#">이케아/기타</a>
+                              </li>
+                            </ul>
+                          </div>
+                          <!-- finish 가구카테고리 3depth -->
+                        </li>
+                        <li>
+                          <a href="#">매트리스</a>
+                          <div class="ctr-list ctr-3">
+                            <ul>
+                              <li>
+                                <a href="#">추천제품</a>
+                              </li>
+                              <li>
+                                <a href="#">싱글매트리스</a>
+                              </li>
+                              <li>
+                                <a href="#">슈퍼싱글/더블매트리스</a>
+                              </li>
+                              <li>
+                                <a href="#">퀸/킹매트리스</a>
+                              </li>
+                              <li>
+                                <a href="#">유아동매트리스</a>
+                              </li>
+                              <li>
+                                <a href="#">스프레드/매트리스커버</a>
+                              </li>
+                              <li>
+                                <a href="#">이케아/기타</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </li>
+                        <li>
+                          <a href="#">테이블/책상</a>
+                          <div class="ctr-list ctr-3">
+                            <ul>
+                              <li>
+                                <a href="#">추천제품</a>
+                              </li>
+                              <li>
+                                <a href="#">철제테이블</a>
+                              </li>
+                              <li>
+                                <a href="#">원목테이블</a>
+                              </li>
+                              <li>
+                                <a href="#">1인용테이블/식탁</a>
+                              </li>
+                              <li>
+                                <a href="#">2인용 테이블/식탁</a>
+                              </li>
+                              <li>
+                                <a href="#">4인용 테이블/식탁</a>
+                              </li>
+                              <li>
+                                <a href="#">6인용 테이블/식탁</a>
+                              </li>
+                              <li>
+                                <a href="#">책상/데스크</a>
+                              </li>
+                              <li>
+                                <a href="#">다용도/수납테이블</a>
+                              </li>
+                              <li>
+                                <a href="#">접이식테이블</a>
+                              </li>
+                              <li>
+                                <a href="#">야외/바테이블</a>
+                              </li>
+                              <li>
+                                <a href="#">커피/소파테이블</a>
+                              </li>
+                              <li>
+                                <a href="#">콘솔/사이드테이블</a>
+                              </li>
+                              <li>
+                                <a href="#">원형/좌식테이블</a>
+                              </li>
+                              <li>
+                                <a href="#">침실테이블/협탁</a>
+                              </li>
+                              <li>
+                                <a href="#">화장대</a>
+                              </li>
+                              <li>
+                                <a href="#">테이블상판/다리</a>
+                              </li>
+                              <li>
+                                <a href="#">테이블의자세트</a>
+                              </li>
+                              <li>
+                                <a href="#">이케아/기타</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </li>
+                      </ul>
+
+                    </div>
+                    <!-- finish 가구카테고리 2depth -->
+                  </li>
+                  <!-- //finish가구 -->
+                  <!--  조명.데코 -->
+                  <li>
+                    <a href="#">조명·데코 소품<span class="emp"></span></a>
+                    <!--카테고리 2depth -->
+                    <div class="ctr-list ctr-2">
+                      <ul>
+                        <li>
+                          <a href="#">조명</a>
+                          <!-- 카테고리 3depth -->
+                          <div class="ctr-list ctr-3">
+                            <ul>
+                              <li>
+                                <a href="#">추천상품</a>
+                              </li>
+                              <li>
+                                <a href="#">테이블조명</a>
+                              </li>
+                              <li>
+                                <a href="#">플로어조명</a>
+                              </li>
+                              <li>
+                                <a href="#">작업조명</a>
+                              </li>
+                              <li>
+                                <a href="#">벽/집게조명</a>
+                              </li>
+                              <li>
+                                <a href="#">펜던트조명</a>
+                              </li>
+                              <li>
+                                <a href="#">천장조명</a>
+                              </li>
+                              <li>
+                                <a href="#">충전식조명</a>
+                              </li>
+                              <li>
+                                <a href="#">원목조명</a>
+                              </li>
+                              <li>
+                                <a href="#">디자인조명</a>
+                              </li>
+                              <li>
+                                <a href="#">전구,램프쉐이드</a>
+                              </li>
+                              <li>
+                                <a href="#">램프베이스</a>
+                              </li>
+                              <li>
+                                <a href="#">이케아/기타</a>
+                              </li>
+                            </ul>
+                          </div>
+                          <!-- finish 가구카테고리 3depth -->
+                        </li>
+                        <li>
+                          <a href="#">데코 · 인테리어 소품</a>
+                          <div class="ctr-list ctr-3">
+                            <ul>
+                              <li>
+                                <a href="#">추천제품</a>
+                              </li>
+                              <li>
+                                <a href="#">시계</a>
+                              </li>
+                              <li>
+                                <a href="#">거울</a>
+                              </li>
+                              <li>
+                                <a href="#">액자</a>
+                              </li>
+                              <li>
+                                <a href="#">캔들</a>
+                              </li>
+                              <li>
+                                <a href="#">화분용품</a>
+                              </li>
+                              <li>
+                                <a href="#">장식품</a>
+                              </li>
+                              <li>
+                                <a href="#">문구/데스크소품</a>
+                              </li>
+                              <li>
+                                <a href="#">이케아/소품</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </li>
+                      </ul>
+
+                    </div>
+                    <!-- finish 가구카테고리 2depth -->
+                  </li>
+                  <!-- //finish 조명,데코 -->
+                  <!-- 패브릭 · 커튼 -->
+                  <li>
+                    <a href="#">패브릭 · 커튼<span class="emp"></span></a>
+                    <!--카테고리 2depth -->
+                    <div class="ctr-list ctr-2">
+                      <ul>
+                        <li>
+                          <a href="#">커튼,커튼용품</a>
+                          <!-- 카테고리 3depth -->
+                          <div class="ctr-list ctr-3">
+                            <ul>
+                              <li>
+                                <a href="#">암막커튼</a>
+                              </li>
+                              <li>
+                                <a href="#">일반커튼</a>
+                              </li>
+                              <li>
+                                <a href="#">샤워커튼</a>
+                              </li>
+                              <li>
+                                <a href="#">롤블라인드</a>
+                              </li>
+                              <li>
+                                <a href="#">커튼봉.커튼부자재</a>
+                              </li>
+                            </ul>
+                          </div>
+                          <!-- finish 3depth -->
+                        </li>
+                        <li>
+                          <a href="#">러그/카페트</a>
+                          <div class="ctr-list ctr-3">
+                            <ul>
+                              <li>
+                                <a href="#">추천제품</a>
+                              </li>
+                              <li>
+                                <a href="#">러그/카페트</a>
+                              </li>
+                              <li>
+                                <a href="#">발매트</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </li>
+                        <li>
+                          <a href="#">이불/배게</a>
+                          <!-- 카테고리 3depth -->
+                          <div class="ctr-list ctr-3">
+                            <ul>
+                              <li>
+                                <a href="#">이불</a>
+                              </li>
+                              <li>
+                                <a href="#">베게</a>
+                              </li>
+                              <li>
+                                <a href="#">베게솜</a>
+                              </li>
+                            </ul>
+                          </div>
+                          <!-- finish 3depth -->
+                        </li>
+                        <li>
+                          <a href="#">쿠션/방석</a>
+
+                        </li>
+                        <li>
+                          <a href="#">담요/실내화</a>
+
+                        </li>
+                        <li>
+                          <a href="#">담요/실내화</a>
+
+                        </li>
+                        <li>
+                          <a href="#">패브릭 바구니/수납함</a>
+
+                        </li>
+                      </ul>
+                      <div class="list-btn" style="display:none">
+                        <a href="#">NEW</a>
+                        <a href="#">시리즈</a>
+                      </div>
+                    </div>
+                    <!-- finish 가구카테고리 2depth -->
+                  </li>
+                  <!--//finish 패브릭 · 커튼 -->
+                </ul>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- //gnb 제품 메뉴 끝 -->
+
+
+          <ul class="gnb-list">
+            <li>
+              <a class="" href="#">베스트</a>
+            </li>
+            <li>
+              <a class="" href="#">기획전</a>
+            </li>
+            <li>
+              <a class="" href="#">세일</a>
+            </li>
+          </ul>
+
+        </div>
+        <!-- finishgnb menu-->
+      </div>
+
+
+    </div>
   </header>
-  
-  <nav class="gnb_pc">
-  <ul class="head_list">
-    <li><a href="#">제품</a></li>
-    <li><a href="#">베스트</a></li>
-    <li><a href="#">기획전</a></li>
-    <li><a href="#">세일</a></li>
-  </ul>
-</nav>
-
-
   <main>
-   <div class="pc_mainbanner">
+
+    <style>
+
+    </style>
+
+    <div class="pc_mainbanner">
       <div class="swipe_main_banner" id="swipe_main_banner">
         <div class="swipe_banner_all" id="swipe_banner_all">
           <div class="swiper-wrapper">
-  
+
             <div class="swiper-slide">
               <a href="#">
-                <img src="http://placehold.it/1920x450" style="position:relative;">
+                <img src="http://placehold.it/1920x560" style="position:relative;">
                 <div class="main_text">
                   <div><strong class="banner_main_tit ">모두 각자 빛나는 취향</strong></div>
                   <div><span class="banner_sub_tit ">조명으로 감성취향 on</span></div>
@@ -63,220 +436,408 @@
                 </div>
               </a>
             </div>
-  
+
             <div class="swiper-slide">
               <a href="#">
-                <img src="http://placehold.it/1920x450" tyle="position:relative;">
+                <img src="http://placehold.it/1920x560" tyle="position:relative;">
               </a>
             </div>
-  
+
             <div class="swiper-slide">
               <a href="#">
-                <img src="http://placehold.it/1920x450" tyle="position:relative;">
+                <img src="http://placehold.it/1920x560" tyle="position:relative;">
               </a>
             </div>
-  
+
           </div>
-  
+
           <!-- Add Pagination -->
           <div class="swiper-pagination"></div>
           <div class="swiper-progressbar"></div>
-  
+
           <!-- Add Arrow -->
           <div class="swiper-button-prev"></div>
           <div class="swiper-button-next"></div>
+          <div class="btns">
+            <button class="start">시작</button>
+            <button class="stop">정지</button>
+          </div>
         </div>
       </div>
     </div>
-  
-    <script>
-
-      var totalSlide = $('#swipe_main_banner .swiper-wrapper .swiper-slide').length;
-      var fragment = document.querySelector('#swipe_main_banner .swiper-pagination');
-      fragment.innerHTML = ('<span style="color:white;">' + 1 + '</span> <span class="mainbanner_bar"></span> ' + totalSlide);
-
-      var swiper = new Swiper('#swipe_banner_all', {
-        // Optional parameters
-        slidesPerView: 1,
-        spaceBetween: 30,
-        centeredSlides: true,
-        loop: true,
-        loopedSLides: 3,
-        simulateTouch: true,
-        grabCursor: true,
-        speed: 800,
-        loopAdditionalSlides: 1,
-        pagination: {
-          el: '.swiper-progressbar',
-          type: 'progressbar'
-        },
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-        autoplay: {
-          delay: 3500,
-          disableOnInteraction: false,
-        },
-        on: {
-          slideChange: function () {
-            fragment.innerHTML = ('<span style="color:white;">' + (this.realIndex + 1) + '</span> <span class="mainbanner_bar"></span> ' + totalSlide);
-          }
-        }
-      });
-
-    </script>
-
-  <section id="iconmenu">
-    <ul>
-      <li><a href="#"><img src="image/circle_menu1.png" alt="cup1">
-          <span>가구</span></a></li>
-      <li><a href="#"><img src="image/circle_menu2.png" alt="cup2">
-          <span>조명/데코소품</span></a></li>
-      <li><a href="#"><img src="image/circle_menu3.png" alt="cub3">
-          <span>패션/커튼</span></a></li>
-      <li><a href="#"><img src="image/circle_menu4.png" alt="cub4">
-          <span>베란다/바닥재</span></a></li>
-      <li><a href="#"><img src="image/circle_menu5.png" alt="cub5">
-          <span>수납/청소용품</span></a></li>
-      <li><a href="#"><img src="image/circle_menu6.png" alt="cup1">
-          <span>주방용품</span></a></li>
-      <li><a href="#"><img src="image/circle_menu7.png" alt="cub5">
-          <span>욕실용품</span></a></li>
-      <li><a href="#"><img src="image/circle_menu8.png" alt="cup2">
-          <span>어린이</span></a></li>
-      <li><a href="#"><img src="image/circle_menu9.png" alt="cub3">
-          <span>뷰티/패션</span></a></li>
-      <li><a href="#"><img src="image/circle_menu10.png" alt="cub4">
-          <span>애완</span></a></li>
-    </ul>
-  </section>
-
-  <div id="tab_wrapper">
-
-    <div class="nav">
-      <ul class="tab_menu">
-        <li><a href="#tab1" class="selected">BEST ITEM</a>
-        </li>
 
 
-        <li><a href="#tab2">NEW ARRIVAL</a>
-        </li>
 
-
-        <li><a href="#tab4">MD'S CHOICE</a>
-        </li>
+    <section id="iconmenu">
+      <ul>
+        <li><a href="#"><img src="image/circle_menu1.png" alt="cup1">
+            <span>가구</span></a></li>
+        <li><a href="#"><img src="image/circle_menu2.png" alt="cup2">
+            <span>조명/데코소품</span></a></li>
+        <li><a href="#"><img src="image/circle_menu3.png" alt="cub3">
+            <span>패션/커튼</span></a></li>
+        <li><a href="#"><img src="image/circle_menu4.png" alt="cub4">
+            <span>베란다/바닥재</span></a></li>
+        <li><a href="#"><img src="image/circle_menu5.png" alt="cub5">
+            <span>수납/청소용품</span></a></li>
+        <li><a href="#"><img src="image/circle_menu6.png" alt="cup1">
+            <span>주방용품</span></a></li>
+        <li><a href="#"><img src="image/circle_menu7.png" alt="cub5">
+            <span>욕실용품</span></a></li>
+        <li><a href="#"><img src="image/circle_menu8.png" alt="cup2">
+            <span>어린이</span></a></li>
+        <li><a href="#"><img src="image/circle_menu9.png" alt="cub3">
+            <span>뷰티/패션</span></a></li>
+        <li><a href="#"><img src="image/circle_menu10.png" alt="cub4">
+            <span>애완</span></a></li>
       </ul>
-    </div>
+    </section>
 
+    <div id="tab_wrapper">
 
-    <ul class="panel">
-      <li id="tab1">
-        <ul class="tbtn cf:after">
-          <li><a href="#mpr1" class="selected">가구1</a></li>
-          <li><a href="#mpr2">조명·데코소품</a></li>
-          <li><a href="#mpr2">패브릭·커튼</a></li>
-          <li><a href="#mpr2">베란다·배닥자</a></li>
-          <li><a href="#mpr2">조명·데코소품</a></li>
-          <li><a href="#mpr2">조명·데코소품</a></li>
-        </ul>
-        <ul class="content">
+      <nav>
+        <ul class="tabs">
           <li>
-              <img src="http://placehold.it/370X180" alt="">
+            <a href="#tab1">BEST ITEM</a>
           </li>
 
           <li>
-              <img src="http://placehold.it/370X180" alt="">
+            <a href="#tab2">NEW ARRIVAL</a>
           </li>
 
           <li>
-              <img src="http://placehold.it/370X180" alt="">
-
-          </li>
-
-          <li>
-              <img src="http://placehold.it/370X180" alt="">
-          </li>
-
-        </ul>
-      </li>
-
-
-      <li id="tab2">
-        <ul class="tbtn cf:after">
-          <li><a href="#mpr1" class="selected">가구2</a></li>
-          <li><a href="#mpr2">조명·데코소품</a></li>
-          <li><a href="#mpr2">패브릭·커튼</a></li>
-          <li><a href="#mpr2">베란다·배닥자</a></li>
-          <li><a href="#mpr2">조명·데코소품</a></li>
-          <li><a href="#mpr2">조명·데코소품</a></li>
-        </ul>
-        <ul class="content">
-          <li>
-              <img src="https://source.unsplash.com/category/nature/370x180">
-          </li>
-          <li>
-              <img src="https://source.unsplash.com/category/nature/370x180">
-          </li>
-          <li>
-              <img src="https://source.unsplash.com/category/nature/370x180">
-          </li>
-          <li>
-              <img src="https://source.unsplash.com/category/nature/370x180">
+            <a href="#tab3">MD'S CHOICE</a>
           </li>
         </ul>
-      </li>
+      </nav>
 
-      <li id="tab3">
-        <ul class="tbtn">
-          <li><a href="#mpr1" class="selected">가구3</a></li>
-          <li><a href="#mpr2">조명·데코소품</a></li>
-          <li><a href="#mpr2">패브릭·커튼</a></li>
-          <li><a href="#mpr2">베란다·배닥자</a></li>
-          <li><a href="#mpr2">조명·데코소품</a></li>
-          <li><a href="#mpr2">조명·데코소품</a></li>
-        </ul>
-        <ul class="content">
-          <li>
+      <ul class="panel">
+
+        <li class="tabs_content" id="tab1">
+          <nav>
+            <ul class="nested_tabs cf">
+              <li>
+                <a href="#nested1">침대</a>
+              </li>
+              <li>
+                <a href="#nested2">매트리스</a>
+              </li>
+              <li>
+                <a href="#nested3">테이블</a>
+              </li>
+              <li>
+                <a href="#nested4">의자</a>
+              </li>
+              <li>
+                <a href="#nested5">소파</a>
+              </li>
+              <li>
+                <a href="#nested6">수납함</a>
+              </li>
+            </ul>
+          </nav>
+
+          <ul class="nested_content cf" id="nested1">
+            <li>
               <img src="https://source.unsplash.com/category/furniture/370x180">
-          </li>
-          <li>
+            </li>
+            <li>
               <img src="https://source.unsplash.com/category/furniture/370x180">
-          </li>
-          <li>
-            <img src="https://source.unsplash.com/category/furniture/370x180">
-        </li>
-        <li>
-            <img src="https://source.unsplash.com/category/furniture/370x180">
-        </li>
-          
-        </ul>
-      </li>
-    </ul>
-  </div>
+            </li>
+            <li>
+              <img src="https://source.unsplash.com/category/furniture/370x180">
+            </li>
 
-  
-    <footer>
-      <div class="footer_wrapper">
+          </ul>
+
+          <ul class="nested_content cf" id="nested2">
+            <li>
+              <img src="https://source.unsplash.com/category/interior/370x180">
+            </li>
+            <li>
+              <img src="https://source.unsplash.com/category/interior/370x180">
+            </li>
+            <li>
+              <img src="https://source.unsplash.com/category/interior/370x180">
+            </li>
+          </ul>
+
+          <ul class="nested_content cf" id="nested3">
+            <li>
+              <img src="https://source.unsplash.com/category/table/370x180">
+            </li>
+            <li>
+              <img src="https://source.unsplash.com/category/table/370x180">
+            </li>
+            <li>
+              <img src="https://source.unsplash.com/category/table/370x180">
+            </li>
+          </ul>
+
+          <ul class="nested_content cf" id="nested4">
+            <li>
+              <img src="https://source.unsplash.com/category/table/370x180">
+            </li>
+            <li>
+              <img src="https://source.unsplash.com/category/table/370x180">
+            </li>
+            <li>
+              <img src="https://source.unsplash.com/category/table/370x180">
+            </li>
+          </ul>
+
+          <ul class="nested_content cf" id="nested5">
+            <li>
+              <img src="https://source.unsplash.com/category/table/370x180">
+            </li>
+            <li>
+              <img src="https://source.unsplash.com/category/table/370x180">
+            </li>
+            <li>
+              <img src="https://source.unsplash.com/category/table/370x180">
+            </li>
+          </ul>
+
+          <ul class="nested_content cf" id="nested6">
+            <li>
+              <img src="https://source.unsplash.com/category/table/370x180">
+            </li>
+            <li>
+              <img src="https://source.unsplash.com/category/table/370x180">
+            </li>
+            <li>
+              <img src="https://source.unsplash.com/category/table/370x180">
+            </li>
+          </ul>
+
+        </li>
+
+        <li class="tabs_content" id="tab2">
+
+          <nav>
+            <ul class="nested_tabs cf">
+              <li>
+                <a href="#nested7">침대</a>
+              </li>
+              <li>
+                <a href="#nested8">매트리스</a>
+              </li>
+              <li>
+                <a href="#nested9">테이블</a>
+              </li>
+              <li>
+                <a href="#nested10">의자</a>
+              </li>
+              <li>
+                <a href="#nested11">소파</a>
+              </li>
+              <li>
+                <a href="#nested12">수납함</a>
+              </li>
+            </ul>
+          </nav>
+
+          <ul class="nested_content cf" id="nested7">
+            <li>
+              <img src="https://source.unsplash.com/category/furniture/370x180">
+            </li>
+            <li>
+              <img src="https://source.unsplash.com/category/furniture/370x180">
+            </li>
+            <li>
+              <img src="https://source.unsplash.com/category/furniture/370x180">
+            </li>
+
+          </ul>
+
+          <ul class="nested_content cf" id="nested8">
+            <li>
+              <img src="https://source.unsplash.com/category/interior/370x180">
+            </li>
+            <li>
+              <img src="https://source.unsplash.com/category/interior/370x180">
+            </li>
+            <li>
+              <img src="https://source.unsplash.com/category/interior/370x180">
+            </li>
+          </ul>
+
+          <ul class="nested_content cf" id="nested9">
+            <li>
+              <img src="https://source.unsplash.com/category/table/370x180">
+            </li>
+            <li>
+              <img src="https://source.unsplash.com/category/table/370x180">
+            </li>
+            <li>
+              <img src="https://source.unsplash.com/category/table/370x180">
+            </li>
+          </ul>
+
+          <ul class="nested_content cf" id="nested10">
+            <li>
+              <img src="https://source.unsplash.com/category/table/370x180">
+            </li>
+            <li>
+              <img src="https://source.unsplash.com/category/table/370x180">
+            </li>
+            <li>
+              <img src="https://source.unsplash.com/category/table/370x180">
+            </li>
+          </ul>
+
+          <ul class="nested_content cf" id="nested11">
+            <li>
+              <img src="https://source.unsplash.com/category/table/370x180">
+            </li>
+            <li>
+              <img src="https://source.unsplash.com/category/table/370x180">
+            </li>
+            <li>
+              <img src="https://source.unsplash.com/category/table/370x180">
+            </li>
+          </ul>
+
+          <ul class="nested_content cf" id="nested12">
+            <li>
+              <img src="https://source.unsplash.com/category/table/370x180">
+            </li>
+            <li>
+              <img src="https://source.unsplash.com/category/table/370x180">
+            </li>
+            <li>
+              <img src="https://source.unsplash.com/category/table/370x180">
+            </li>
+          </ul>
+
+        </li>
+
+        <li class="tabs_content" id="tab3">
+
+          <nav>
+            <ul class="nested_tabs cf">
+              <li>
+                <a href="#nested13">침대</a>
+              </li>
+              <li>
+                <a href="#nested14">매트리스</a>
+              </li>
+              <li>
+                <a href="#nested15">테이블</a>
+              </li>
+              <li>
+                <a href="#nested16">의자</a>
+              </li>
+              <li>
+                <a href="#nested17">소파</a>
+              </li>
+              <li>
+                <a href="#nested18">수납함</a>
+              </li>
+            </ul>
+          </nav>
+
+          <ul class="nested_content cf" id="nested13">
+            <li>
+              <img src="https://source.unsplash.com/category/furniture/370x180">
+            </li>
+            <li>
+              <img src="https://source.unsplash.com/category/furniture/370x180">
+            </li>
+            <li>
+              <img src="https://source.unsplash.com/category/furniture/370x180">
+            </li>
+
+          </ul>
+
+          <ul class="nested_content cf" id="nested14">
+            <li>
+              <img src="https://source.unsplash.com/category/interior/370x180">
+            </li>
+            <li>
+              <img src="https://source.unsplash.com/category/interior/370x180">
+            </li>
+            <li>
+              <img src="https://source.unsplash.com/category/interior/370x180">
+            </li>
+          </ul>
+
+          <ul class="nested_content cf" id="nested15">
+            <li>
+              <img src="https://source.unsplash.com/category/table/370x180">
+            </li>
+            <li>
+              <img src="https://source.unsplash.com/category/table/370x180">
+            </li>
+            <li>
+              <img src="https://source.unsplash.com/category/table/370x180">
+            </li>
+          </ul>
+
+          <ul class="nested_content cf" id="nested16">
+            <li>
+              <img src="https://source.unsplash.com/category/table/370x180">
+            </li>
+            <li>
+              <img src="https://source.unsplash.com/category/table/370x180">
+            </li>
+            <li>
+              <img src="https://source.unsplash.com/category/table/370x180">
+            </li>
+          </ul>
+
+          <ul class="nested_content cf" id="nested17">
+            <li>
+              <img src="https://source.unsplash.com/category/table/370x180">
+            </li>
+            <li>
+              <img src="https://source.unsplash.com/category/table/370x180">
+            </li>
+            <li>
+              <img src="https://source.unsplash.com/category/table/370x180">
+            </li>
+          </ul>
+
+          <ul class="nested_content cf" id="nested18">
+            <li>
+              <img src="https://source.unsplash.com/category/table/370x180">
+            </li>
+            <li>
+              <img src="https://source.unsplash.com/category/table/370x180">
+            </li>
+            <li>
+              <img src="https://source.unsplash.com/category/table/370x180">
+            </li>
+          </ul>
+
+        </li>
+
+
+      </ul>
+
+  </main>
+
+  <footer>
+    <div class="footer_wrapper">
       <div class="fmenu">
-      <p>고객지원</p>
-      <ul class="cf">
-        <li>회사 소개</li>
-        <li>문의(Q&A) </li>
-        <li>지점 찾기</li>
-        <li>조립 설명서</li>
-      </ul>
+        <p>고객지원</p>
+        <ul class="cf">
+          <li>회사 소개</li>
+          <li>문의(Q&A) </li>
+          <li>지점 찾기</li>
+          <li>조립 설명서</li>
+        </ul>
 
-      <p>정보공개</p>
-      <ul class="cf">
-        <li>이용 약관</li>
-        <li>품질보증기준 </li>
-        <li>개인정보처리방침</li>
-        <li>공지 사항</li>
-      </ul>
-     </div>
+        <p>정보공개</p>
+        <ul class="cf">
+          <li>이용 약관</li>
+          <li>품질보증기준 </li>
+          <li>개인정보처리방침</li>
+          <li>공지 사항</li>
+        </ul>
+      </div>
 
-       <div class="finfo">
+      <div class="finfo">
         <h2><a>마켓비</a></h2>
         <ul class="cf">
           <li> 전화 031 - 943 - 8307</li>
@@ -293,12 +854,9 @@
         <address>
           교환 / 반품 주소 : 경기도 파주시 파주읍 정문로 726 마켓비 물류센터
         </address>
-        </div>
       </div>
-    </footer>
-</main>
-
-
+    </div>
+  </footer>
   <script src="js/marketB.js"></script>
 
 </body>
