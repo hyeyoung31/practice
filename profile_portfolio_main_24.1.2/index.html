@@ -8,122 +8,74 @@
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/menu.css">
 	<link rel="stylesheet" href="css/index.css">
-	<script src="js/jquery-1.11.2.min.js"></script>
+	<link rel="stylesheet" href="css/all.min.css">
 
-	<script src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<script src="js/jquery-1.11.2.min.js"></script>
+	<script src="js/index.js"></script>
 	<script src="js/jquery.fittext.js"></script>
 	<script src="js/menu.js"></script>
 	<link rel="stylesheet" href="css/slick-theme.css">
 	<link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
-	<script src="js/swiper.min.js"></script>
-	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
 
-	<link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
-
-
-	<script>
-
-		$(function () {
-			$(".cta").click(function () {
-				$("html, body").animate({ scrollTop: $("#second").offset().top }, 1000);
-
-			});
-
-			$("#first").on("mousewheel", function () {
-				return false;
-
-			});
-
-
-			$('#banner').slick({
-				//    dots:true,
-				autoplay: true,
-				infinite: true,
-				autoplaySpeed: 4000,
-				slidesToShow: 1,
-			});
-
-			$(".play").on("click", function () {
-				$("#banner").slick("slickPlay");
-			});
-
-			$(".pause").on("click", function () {
-				$("#banner").slick("slickPause");
-			});
-
-
-			$(".wrap h1").fitText(0.55);
-
-		});
-
-	</script>
-
-	</script>
 </head>
 
 <body>
-	<div id="header">
+	<div class="header">
 		<div class="header-container">
-			<ul class="gnb cf">
+			<ul class="gnb">
 				<li><a href="#">main</a></li>
-				<li><a href="#second">clothes portfolio</a></li>
-				<li><a href="workportfolio.html">work portfolio</a></li>
+				<li><a href="http://bomysbom.dothome.co.kr/market_B/index.html">web portfolio</a></li>
+				<li><a href="workportfolio.html">design portfolio</a></li>
 			</ul>
 		</div>
+		<div id="hamburger-menu">
+			<span></span> <span></span> <span></span>
+		</div>
+	
 	</div>
 
-
-	<div id="hamburger-menu">
-		<span></span> <span></span> <span></span>
-	</div>
 
 
 	<nav id="menu-container">
 		<div class="head">
-			<button class="cross">&#735;</button>
-
+		<button class="cross">&#735;</button>
 		</div>
-
+		
 		<ul class="menu-list">
 			<li id="nav1" class="accordion">
-				<a class="menu-link" href="#">main</a>
+			  <a class="menu-link" href="index.html">main</a>
 			</li>
-
-
+	  
+	  
 			<li id="nav2" class="accordion">
-				<a class="menu-link" href="#second">clothes portfolio</a>
+			  <a class="menu-link" href="http://bomysbom.dothome.co.kr/market_B/index.html">web portfolio</a>
 			</li>
-
+	  
 			<li id="nav3" class="accordion accordion-toggle">
-				<a class="menu-link" href="workportfolio.html">work portfolio</a>
-			</li>
-
-			<ul class="menu-submenu accordion-content">
+			  <a class="menu-link" href="#">design portfolio</a>
+				<ul class="menu-submenu">
 				<li><a href="Rollin.html">Rollin carrier backpack</a></li>
+				<li><a href="clothes.html">Clothes banner</a></li>
 				<li><a href="tabletpouch.html">Slow travel Pouch</a></li>
 				<li><a href="Cremamotifcase.html">Crema motif case</a></li>
 				<li><a href="ebookzabara.html">ebook zabara</a></li>
 				<li><a href="Protector_glass.html">Protector glass</a></li>
 				<li><a href="dapcase.html">Dap case</a></li>
 				<li><a href="product_illust.html">Product illust</a></li>
-			</ul>
-
-		</ul>
+				</ul>
+	     	</li>
+		  </ul>
 	</nav>
 
 
 	<section id="first">
 		<div class="wrap wpc">
 			<h1>Portfolio</h1>
-			<p>안녕하세요. '(주)이브이아이엔씨'와 함께 일하고 싶은 지원자 조혜영입니다. <br>하단에는 패션 관련 포토샵 작업물을 넣었으며, work portfolio 에는
-				<br>웹디자이너 근무 시 제작한 작업물을 넣었습니다.
-			</p>
+			
 		</div>
 		<div class="wrap wmobile">
 			<h1>Portfolio</h1>
-			<p>안녕하세요. '(주)이브이아이엔씨'와 함께 일하고 싶은 지원자 조혜영입니다. 하단에는 패션 관련 포토샵 작업물을 넣었으며, work portfolio 에는
-				웹디자이너 근무 시 제작한 작업물을 넣었습니다 </p>
 		</div>
 		<a href="#" class="cta" onclick="return false">
 			<span> </span>Scroll</a>
@@ -131,103 +83,26 @@
 
 
 	<section id="second">
-		<h2></h2>
-		<section id="dailyeve">
-			<h2>의류 배너</h2>
-			<p>의류쇼핑몰 '데일리브' 촬영컷을 활용한 배너를 제작하였습니다</p>
-			<ul id="banner">
-				<li class="slick-slide"><a href="#"> <img src="image/banner1.gif"
-							alt="[울50%]롤리팝 울 크롭 스트라이프 니트 베스트 2color 배너"></a></li>
-				<li class="slick-slide "><a href="#"> <img src="image/banner2.gif"
-							alt="커스터드 후드 더플 니트 꽈배기 떡볶이 가디건 1color 배너"></a></li>
-				<li class="slick-slide"><a href="#"> <img src="image/banner_3.jpg" alt="카야 양기모 무지 크롭 후드티 7color 배너"></a>
-				</li>
-			</ul>
-			<button class="play">시작</button>
-			<button class="pause">정지</button>
-		</section>
 
+		<h3><img src="image/logo_marketB.png" alt="마켓비logo"><span>사이트리뉴얼</span></h3>
 
-
-		<section id="Ladyvolume">
-			<h2>기획전 페이지</h2>
-			<p>'레이디 볼륨'기획전 페이지를 제작하였습니다.</p>
-			<img src="image/promotionimage.jpg" alt="">
-			<div class="pr_slide">
-
-				<div class="background">
-					<img src="image/background.jpg">
-
-					<div class="image-swiper-container1 ">
-						<div class="swiper-wrapper" id="swiper-wrapper-60686df622627df5">
-
-
-							<div class="swiper-slide">
-								<img src="image/slide_img1.jpg" alt="">
-							</div>
-							<div class="swiper-slide">
-								<img src="image/slide_img2.jpg" alt="">
-							</div>
-							<div class="swiper-slide">
-								<img src="image/slide_img3.jpg" alt="">
-							</div>
-							<div class="swiper-slide">
-								<img src="image/slide_img4.jpg" alt="">
-							</div>
-							<div class="swiper-slide">
-								<img src="image/slide_img5.jpg" alt="">
-							</div>
-							<div class="swiper-slide">
-								<img src="image/slide_img6.jpg" alt="">
-							</div>
-							<div class="swiper-slide">
-								<img src="image/slide_img1.jpg" alt="">
-							</div>
-							<div class="swiper-slide">
-								<img src="image/slide_img2.jpg" alt="">
-							</div>
-							<div class="swiper-slide">
-								<img src="image/slide_img3.jpg" alt="">
-							</div>
-							<div class="swiper-slide">
-								<img src="image/slide_img4.jpg" alt="">
-							</div>
-							<div class="swiper-slide swiper-slide-prev">
-								<img src="image/slide_img5.jpg" alt="">
-							</div>
-							<div class="swiper-slide">
-								<img src="image/slide_img6.jpg" alt="">
-							</div>
-
-						</div>
-						<span class="swiper-notification"></span>
-					</div>
-				</div>
-
+		<div class="portfolio_wrapper">
+			<div class="web_portfolio">
+				<img src="image/marketB_portfolio.jpg" alt="webportfolio1">
 			</div>
+			<div class="text">
+				<p><span>Type</span>PC 웹페이지</p>
+				<p><span>Concept</span>마켓비 자사 사이트 리뉴얼</p>
+				<p><span>Date</span>2024.1.15 ~ 현재 진행중</p>
+				<p><span>Color</span><span class="palette p1"></span><span class="palette p2"></span>
+				<span class="palette p3"></span>	<span class="palette p4"></span></p>
+				<p><span>Font</span>Pretendard </p>
+				<p><span>Tools</span> Figma, Photoshop,Visual Studio Code</p>
+				<p><span>기여도</span>퍼블리싱 100%, 메인 페이지 피그마 디자인</p>
+			</div>
+		</div>
 
-
-		</section>
 	</section>
-	<script type="text/javascript">
-
-		//swiper image
-		const swiper1 = new Swiper('.image-swiper-container1', {
-			slidesPerView: 4,
-			spaceBetween: 10,
-			centeredSlides: true,
-			freeMode: true,
-			speed: 1000,
-			autoplay: {
-				delay: 2000,
-			},
-			loop: true,
-		});
-
-
-	</script>
 
 </body>
-
-
 </html>
