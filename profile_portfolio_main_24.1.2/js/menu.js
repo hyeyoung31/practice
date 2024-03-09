@@ -5,24 +5,22 @@ $(function () {
       $(".cross").stop().show();
     });
 
-    
-    $(".menu-list #nav3").click(function () {
-      if ($(this).next().is(":visible")) {
-        $(this).next().stop().slideUp(500);
-        $(this).find("a").removeClass("active");
+      $(".accordion-toggle a ").click(function () {
+        if ($(this).next().is(":visible")) {
+            $(this).next().stop().slideUp(500);
+            $(this).removeClass("active");
 
-      } else {
-        $(this).next().stop().slideDown(500);
-        $(this).find("a").addClass("active");
-      }
+        } else {
+            $(".menu-submenu").stop().slideUp(500);
+            $(this).next().stop().slideDown(500);
+            $(".accordion-toggle> a").removeClass("active");
+            $(this).addClass("active");
+        }
     });
 
-    $(" ccordion-toggle a:before, .accordion-toggle a:after ").click(function () {
+    $(" accordion-toggle a:before, .accordion-toggle a:after ").click(function () {
       return false;
     });
-
-
-
 
     $(".cross").click(function () {
       $("#menu-container").animate({ marginLeft: "0" }, 300);
