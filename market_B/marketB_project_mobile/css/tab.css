@@ -206,7 +206,7 @@ figcaption {
   }
 
   .Mtabs li a {
-    font-size: 0.875rem;
+    font-size: 1.2rem;
   }
 
   .Mnested-tabs li a {
@@ -282,7 +282,7 @@ figcaption {
   }
 
   .Ptabs li a {
-    font-size: 0.875rem;
+    font-size: 1.2rem;
     color: #9A9A9A;
     font-weight: bold;
     display: block;
