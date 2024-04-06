@@ -12,12 +12,146 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/tab.css">
+    <link rel="stylesheet" href="css/mobile.css">
 
 </head>
 
 <body>
-    <div id="Mtab-wrapper" class="container">
+   <header>
+    <div class="Mheader container">
+        <span class="material-symbols-outlined">menu</span>
+        <h1 class="logo"><a>마켓비</a></h1>
+        <div class="Mheader-right">
+        <span class="material-symbols-outlined">search </span>
+        <span class="material-symbols-outlined">local_mall</span>
+        </div>
+     </div>
+   </header>
+
+   <div class="mainbanner" id="M-mainbanner">
+    <!-- Additional required wrapper -->
+    <ul class="swiper-wrapper">
+      <!-- Slides -->
+      <li class="swiper-slide Mbanner1" >
+        <a></a>
+        <div>
+            <h2>slide 1</h2>
+            <p>slide 1 description</p>
+        </div>
+     </li>
+      <li class="swiper-slide Mbanner2">
+       
+        <div>
+            <h2>slide 2</h2>
+            <p>slide 2 description</p>
+        </div>
+      </li>
+      <li class="swiper-slide Mbanner3">
+    
+        <div>
+            <h2>slide 3</h2>
+            <p>slide 3 description</p>
+        </div>
+    </li>
+      <li class="swiper-slide Mbanner4">
+        <div>
+            <h2>slide 4</h2>
+            <p>slide 4 description</p>
+        </div>
+    </li>
+    </ul>
+
+    
+  </div>
+
+  <!-- <div id="pc-mainbanner">
+    <div class="swipe_main_banner" id="swipe_main_banner">
+      <div class="swipe_banner_all" id="swipe_banner_all">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <a href="#">
+              <img src="image/marketB_banner1_.jpg" alt="모듈가구 인테리어 이미지 ">
+              <div class="main_text_wrapper container">
+                <div><strong class="banner_main_tit ">모두, 각자의 수납 오브제</strong></div>
+                <div><span class="banner_sub_tit ">인테리어 x 수납 = 모듈가구</span></div>
+              </div>
+            </a>
+          </div>
+
+          <div class="swiper-slide">
+            <a href="#">
+              <img src="image/marketB_banner3_.jpg" alt="책상, 노란색 캐비닛, 미니 트롤리 인테리어 이미지 ">
+              <div class="main_text_wrapper container">
+                <div><strong class="banner_main_tit ">모두, 각자의 산더미 물건</strong></div>
+                <div><span class="banner_sub_tit ">감성캐비넷에 세련된 수납</span></div>
+              </div>
+            </a>
+          </div>
+
+
+
+          <div class="swiper-slide">
+            <a href="#">
+              <img src="image/marketB_banner5_.jpg" alt="이층 철제침대 이미지">
+              <div class="main_text_wrapper container">
+                <div><strong class="banner_main_tit ">나만의 세게로 몰입</strong></div>
+                <div><span class="banner_sub_tit ">하입코어 특별전</span></div>
+              </div>
+            </a>
+          </div>
+
+          <div class="swiper-slide">
+            <a href="#">
+              <img src="image/marketB_banner6_.jpg" alt="여행 파라솔, 원목 가구, 캠핑용 의자 인테리어 이미지">
+              <div class="main_text_wrapper container">
+                <div><strong class="banner_main_tit ">나를 찾아가는 감각적 여행</strong></div>
+                <div><span class="banner_sub_tit ">도파민다이브 특별전</span></div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="swiper-pagination"></div>
+        <div class="swiper-progressbar"></div>
+        <div class="button-wrapper container">
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <div class="play-button">
+            <div class="start">시작</div>
+            <div class="pause active">정지</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- 아이콘 메뉴 -->
+  <section id="iconmenu" class="container">
+	<h1 class="hidden">아이콘메뉴</h1>
+<div class=" multiple">
+	<div class="swiper-wrapper">
+	  <img class="swiper-slide" src="image/circle_menu1.png" alt="img-1">
+	  <img class="swiper-slide"  src="image/circle_menu2.png" alt="img-2">
+	  <img class="swiper-slide" src="image/circle_menu3.png" alt="img-3">
+	  <img class="swiper-slide" src="image/circle_menu4.png" alt="img-4">
+	  <img class="swiper-slide" src="image/circle_menu5.png" alt="img-1">
+	  <img class="swiper-slide"  src="image/circle_menu6.png" alt="img-2">
+	  <img class="swiper-slide" src="image/circle_menu7.png" alt="img-3">
+	  <img class="swiper-slide" src="image/circle_menu8.png" alt="img-4">
+	  <img class="swiper-slide" src="image/circle_menu9.png" alt="img-4">
+	  <img class="swiper-slide" src="image/circle_menu10.png" alt="img-4">
+	</div>
+	<div class="swiper-button-prev"></div>
+	<div class="swiper-button-next"></div>
+</div>
+<div class="controls">
+	<span id="prev"><img src="image/icon-button-prev.png"></span>
+	<span id="next"><img src="image/icon-button-next.png"></span>
+</div>
+
+</section>
+
+   <div id="Mtab-wrapper" class="container">
         <nav>
             <ul class="Mtabs">
                 <li>
@@ -3357,11 +3491,12 @@
                 </ul>
             </li>
         </ul>
-    </div>
+    </div> 
 
+
+<script src="js/Mtab.js"></script>
+<script src="js/Ptab.js"></script>
 
 </body>
-<script src="js/Ptab.js"></script>
-<script src="js/Mtab.js"></script>
 
 </html>
