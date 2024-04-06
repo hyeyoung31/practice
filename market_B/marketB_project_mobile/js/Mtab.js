@@ -1,4 +1,50 @@
+// 배너
+var swiper = new Swiper('.mainbanner', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
 
+});
+
+
+
+// 아이콘메뉴
+
+var swiper = new Swiper('.multiple', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+
+  navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+  },
+  slidesPerView: 5,
+spaceBetween: 5,
+breakpoints: {
+576: {
+slidesPerView: 7,
+spaceBetween: 30
+},
+1025: {
+slidesPerView: 10,
+spaceBetween: 40
+}
+}
+
+});
+
+$('#prev').click(function(){
+  swiper.slidePrev();
+});
+
+$('#next').click(function(){
+  swiper.slideNext();
+});
+
+
+
+// 탭
 const tabLink = $('.Mtabs li a');
 const nestedLink = $('.Mnested-tabs li a'); 
 
@@ -35,6 +81,7 @@ if (!tabLinkActive.length) {
 }
 
 
+
     var swiper = new Swiper('.swiper', {
         // Optional parameters
         direction: 'horizontal',
@@ -59,6 +106,7 @@ if (!tabLinkActive.length) {
     });
 
 
+
     // $('.pager span').click(function(){
     //     swiper.slideTo($(this).index());
     //     $('.pager span').removeClass('active');
@@ -66,4 +114,5 @@ if (!tabLinkActive.length) {
 
         
     // });
+ 
  
