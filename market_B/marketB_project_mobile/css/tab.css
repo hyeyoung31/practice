@@ -8,12 +8,154 @@ a {
   color: inherit;
 }
 
-#Mtab-wrapper {
+
+.container {
   max-width: 1296px;
   width: 90%;
   margin: 0 auto;
 }
 
+.Mheader {
+display:flex;
+justify-content: space-between;
+height:50px;
+position:relative;
+align-items: center;
+}
+
+
+.Mheader-right{
+ display:flex;
+ gap: 3vw;
+}
+
+h1 a {
+  display: block;
+  overflow: hidden;
+  width:128.7px;
+  height: 23.4px;
+  /* position: relative; */
+  /* width:28vw;
+  height:100%; */
+  background: url(../image/logo.png) no-repeat;
+  background-size: 100%;
+  font-size: 0;
+  line-height: 0;
+  text-indent: -10000px;
+
+}
+
+header .material-symbols-outlined  {
+  /* font-size:6.8vw; */
+  font-size:26px;
+}
+
+/* 슬라이드 */
+.M-mainbanner {
+ width:100%;
+ height:32.5rem;
+}
+.swiper-slide{
+  width:100%;
+  height:32.5rem;
+  position:relative;
+}
+
+.Mbanner1{
+  background:url("../image/Mbanner.png") no-repeat 50% 0; background-size:cover;
+}
+
+.Mbanner2{
+  background:url("../image/Mbanner.png") no-repeat 50% 0; background-size:cover;
+}
+
+.Mbanner3{
+  background:url("../image/Mbanner.png") no-repeat 50% 0; background-size:cover;
+}
+
+.Mbanner4{
+  background:url("../image/Mbanner.png") no-repeat 50% 0; background-size:cover;
+}
+
+#M-mainbanner .swiper-slide div {
+  position:absolute;
+  left:50%;
+  bottom:10%;
+  transform:translate(-50%,-10%);
+}
+
+#pc-mainbanner {
+  display:none;
+}
+/* 아이콘 바로가기 메뉴 */
+
+
+#iconmenu{
+position:relative;
+padding:20px 0;
+margin-bottom:50px;
+}
+
+.hidden{
+ display:none;
+}
+
+.multiple{
+  /* width:960px; */
+  margin:0 auto;
+  overflow:hidden;
+}
+
+.multiple img{
+  width:100%;
+  height:100%;
+}
+
+#prev {
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  left: 0;
+  z-index:9999;
+}
+
+
+#next {
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  right: 0;
+  z-index:9999;
+}
+
+.swiper-button-prev,.swiper-button-next{
+  visibility: hidden;
+}
+
+.swiper-pagination-bullet {
+  visibility: hidden;
+}
+.pager{
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%);
+  bottom:-30px;
+}
+
+.pager span {
+  width:20px;
+  height:3px;
+  display:inline-block;
+  background:rgba(0,0,0,0.5);
+  z-index:99999;
+}
+
+.pager span.active{
+  background:rgba(0,0,0,1); 
+}
+
+
+/* 탭 */
 .Mtabs {
   width: 100%;
   display: flex;
@@ -191,9 +333,6 @@ figcaption {
   background:rgba(0,0,0,1); 
 }  */
 
-.container {
-  border: 1px solid red;
-}
 
 #Ptab-wrapper {
   display: none;
@@ -264,13 +403,23 @@ figcaption {
 /* pc화면 */
 @media screen and (min-width:1025px) {
 
+  /* 해더 */
+
+.Mheader{display:none;}
+/* 배너 */
+
+#M-mainbanner{
+  display:none;
+}
+
+  /* 탭 */
+
   #Mtab-wrapper {
     display: none;
   }
 
   #Ptab-wrapper {
-    margin: 0 auto;
-    max-width: 960px;
+    /* margin: 0 auto; */
     display: block;
   }
 
@@ -493,5 +642,3 @@ figcaption {
     max-width: 1296px;
   }
 }
-
-
