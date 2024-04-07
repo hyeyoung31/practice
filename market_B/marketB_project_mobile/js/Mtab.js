@@ -1,8 +1,37 @@
 // 배너
+var totalSlide = $('.mainbanner .swiper-slide').length;
+var fragment = document.querySelector('.mainbanner .swiper-pagination');
+fragment.innerHTML = ('<span style="color:white;">' + 1 + '</span> <span class="mainbanner_bar"></span> ' + totalSlide);
+
 var swiper = new Swiper('.mainbanner', {
   // Optional parameters
-  direction: 'horizontal',
+  slidesPerView: 1,
+  // spaceBetween: 30,
+  // centeredSlides: true,
   loop: true,
+  loopedSLides: 3,
+  simulateTouch: true,
+  grabCursor: true,
+  speed: 800,
+  loopAdditionalSlides: 1,
+  pagination: {
+    el: '.swiper-progressbar',
+    type: 'progressbar'
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  on: {
+    slideChange: function () {
+      fragment.innerHTML = ('<span style="color:white;">' + (this.realIndex + 1) + '</span> <span class="mainbanner_bar"></span> ' + totalSlide);
+    }
+  },
+  autoplay: {
+    delay: 3500,
+    disableOnInteraction: false,
+  },
+
 
 });
 
