@@ -1,4 +1,5 @@
-// 배너
+
+
 var totalSlide = $('.mainbanner .swiper-slide').length;
 var fragment = document.querySelector('.mainbanner .swiper-pagination');
 fragment.innerHTML = ('<span style="color:white;">' + 1 + '</span> <span class="mainbanner_bar"></span> ' + totalSlide);
@@ -49,12 +50,25 @@ var swiper = new Swiper('.multiple', {
       prevEl: '.swiper-button-prev',
   },
   slidesPerView: 5,
-spaceBetween: 5,
+spaceBetween: 20,
 breakpoints: {
-576: {
-slidesPerView: 7,
-spaceBetween: 30
-},
+// 472: {
+//     slidesPerView: 6,
+//     spaceBetween: 20
+//     },
+500: {
+  slidesPerView: 6,
+  spaceBetween: 20
+  },
+580: {
+      slidesPerView: 7,
+      spaceBetween: 20
+      },
+
+755: {
+  slidesPerView: 8,
+  spaceBetween: 20
+  },
 1025: {
 slidesPerView: 10,
 spaceBetween: 40
@@ -143,5 +157,4 @@ if (!tabLinkActive.length) {
 
         
     // });
- 
  
