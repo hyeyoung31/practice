@@ -52,27 +52,34 @@ var swiper = new Swiper('.multiple', {
   slidesPerView: 5,
 spaceBetween: 20,
 breakpoints: {
-// 472: {
-//     slidesPerView: 6,
-//     spaceBetween: 20
-//     },
-500: {
+440: {
+    slidesPerView: 5,
+    spaceBetween: 25
+    },
+540: {
+      slidesPerView: 5,
+      spaceBetween: 30
+      },
+576: {
   slidesPerView: 6,
   spaceBetween: 20
   },
-580: {
+770: {
       slidesPerView: 7,
-      spaceBetween: 20
+      spaceBetween: 30
       },
-
-755: {
+992: {
   slidesPerView: 8,
-  spaceBetween: 20
+  spaceBetween: 35
   },
-1025: {
-slidesPerView: 10,
-spaceBetween: 40
-}
+1200: {
+slidesPerView: 9,
+spaceBetween: 30
+},
+1400: {
+  slidesPerView: 10,
+  spaceBetween: 30
+  }
 }
 
 });
@@ -90,6 +97,7 @@ $('#next').click(function(){
 // 탭
 const tabLink = $('.Mtabs li a');
 const nestedLink = $('.Mnested-tabs li a'); 
+
 
 tabLink.on("click", function (e) {
   e.preventDefault();
@@ -122,39 +130,3 @@ if (!tabLinkActive.length) {
 } else {
   tabLinkActive.trigger('click');
 }
-
-
-
-    var swiper = new Swiper('.swiper', {
-        // Optional parameters
-        direction: 'horizontal',
-        loop: true,
-
-        pagination: {
-			el: '.swiper-pagination',
-			clickable: true,
-		  },
-
-        slidesPerView: 1,
-        spaceBetween: 30,
-        // Responsive breakpoints
-        breakpoints: {
-          576: {
-            slidesPerView: 2,
-            spaceBetween: 20
-          },
-
-        },
-
-    });
-
-
-
-    // $('.pager span').click(function(){
-    //     swiper.slideTo($(this).index());
-    //     $('.pager span').removeClass('active');
-    //     $(this).addClass('active');
-
-        
-    // });
- 
