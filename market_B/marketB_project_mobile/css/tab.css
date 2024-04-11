@@ -22,7 +22,7 @@ a {
 }
 
 .Mheader{
-  height:50px;
+  height:60px;
   position:relative;
   background:#fff;
 }
@@ -34,7 +34,7 @@ a {
 }
 
 .head-icon span{
-  line-height: 50px;
+  line-height: 60px;
 }
 .Mheader-right{
  display:flex;
@@ -79,13 +79,15 @@ header .material-symbols-outlined  {
 /* 모바일 */
 .mainbanner {
  width:100%;
- height:32.5rem;
+ /* height:32.5rem; */
+ height:650px;
  overflow: hidden;
 }
 
 .mainbanner .swiper-slide{
   width:100%;
-  height:32.5rem;
+  /* height:32.5rem; */
+  height:650px;
   position:relative;
 }
 
@@ -196,6 +198,15 @@ padding:20px 0;
 margin-top:2.3vh;
 }
 
+#iconmenu .swiper-wrapper .swiper-slide span {
+  display: block;
+  margin: 10px auto;
+  font-weight: 500;
+  font-size: 2.5vw;
+  text-align: center;
+  white-space: nowrap;
+}
+
 .hidden{
  display:none;
 }
@@ -212,8 +223,8 @@ margin-top:2.3vh;
 
 #prev {
   position:absolute;
-  top:50%;
-  transform:translateY(-50%);
+  top:35%;
+  transform:translateY(-35%);
   left: 0;
   z-index:1;
 }
@@ -221,8 +232,8 @@ margin-top:2.3vh;
 
 #next {
   position:absolute;
-  top:50%;
-  transform:translateY(-50%);
+  top:35%;
+  transform:translateY(-35%);
   right: 0;
   z-index:1;
 }
@@ -439,9 +450,10 @@ figcaption {
 
 /* 태블릿화면 */
 @media screen and (min-width:576px) {
-  /* .container {
-    max-width: 540px;
-  } */
+  .container {
+    /* max-width: 540px; */
+    max-width: 543px;
+  }
 
   /* 배너 */
 
@@ -467,7 +479,9 @@ figcaption {
   
   /* 아이콘메뉴 */
 
-
+  #iconmenu .swiper-wrapper .swiper-slide span {
+    font-size: 0.9rem;
+  }
 
   /* 텝 */
 
@@ -513,22 +527,26 @@ figcaption {
 
 }
 
-/* @media screen and (min-width:768px) {
+@media screen and (min-width:768px) {
   .container {
-    max-width: 720px;
+    /* max-width: 720px; */
+    max-width: 736px;
   }
 
-} */
+}
 
-/* @media screen and (min-width:992px) {
+@media screen and (min-width:992px) {
   .container {
     max-width: 960px;
   }
 
-} */
+}
 
 /* pc화면 */
 @media screen and (min-width:1025px) {
+  /* .container{
+    width:90%;
+    max-width:1296px;} */
 
   /* 해더 */
 
@@ -683,7 +701,7 @@ input {
   position: absolute;
   left:14%;
   bottom: 50%; 
-  transform: translateY(50% );
+  transform: translateY(50%);
   text-align: left;
   z-index: 1;
 }
@@ -725,14 +743,11 @@ input {
 
 #iconmenu { margin-top:90px;}
 
-.icon {
-  margin-right:22px;
-}
 
-.icon:last-child {
-    margin-right:0;
-}
 
+#iconmenu ul li:last-child {
+  margin-right: 0;
+}
 span.txt {
     display:block;
     font-size:0.75rem;
