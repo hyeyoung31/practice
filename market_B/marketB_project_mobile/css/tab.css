@@ -242,30 +242,14 @@ margin-top:2.3vh;
   visibility: hidden;
 }
 
-.swiper-pagination-bullet {
-  visibility: hidden;
-}
-.pager{
-  position:absolute;
-  left:50%;
-  transform:translateX(-50%);
-  bottom:-30px;
-}
-
-.pager span {
-  width:20px;
-  height:3px;
-  display:inline-block;
-  background:rgba(0,0,0,0.5);
-  z-index:99999;
-}
-
-.pager span.active{
-  background:rgba(0,0,0,1); 
-}
 
 
 /* 탭 */
+
+#Mtab-wrapper{
+  margin-top:2vh;
+}
+
 .Mtabs {
   width: 100%;
   display: flex;
@@ -331,6 +315,7 @@ margin-top:2.3vh;
   width: 100%;
   margin: auto;
   text-align: center;
+  overflow:hidden;
 }
 
 .Mnested-content li {
@@ -351,7 +336,7 @@ figure {
 }
 
 .item-image {
-  width: 36%;
+  width: 38%;
   position: relative;
 }
 
@@ -375,7 +360,7 @@ figcaption {
   display: block;
 }
 
-.Mnested-content .mproduct-item img {
+.mproduct-item img {
   width: 100%;
 }
 
@@ -407,9 +392,6 @@ figcaption {
   font-weight: 300;
 }
 
-.review {
-  padding: 3px 0 0;
-}
 
 .review span {
   font-size: 3vw;
@@ -426,11 +408,18 @@ figcaption {
   visibility: hidden;
  } */
 
-/* .pager{
+                       
+
+#Ptab-wrapper {
+  display: none;
+}
+
+
+.tab-pagination{
   margin-top:10px;
  }
 
- .pager span {
+ .tab-pagination span {
   width:20px;
   height:3px;
   display:inline-block;
@@ -441,12 +430,117 @@ figcaption {
 
 .pager span.active{
   background:rgba(0,0,0,1); 
-}  */
+}  
 
-
-#Ptab-wrapper {
-  display: none;
+/* 서브배너 */
+.sub-banner {
+  border-radius: 13px;
+  overflow: hidden;
+  height:80px;
+  width: 90%;
+  margin: 8.2vh auto 0;
 }
+
+
+.sub1 a {
+  display:block;
+  height:80px;
+  background:url("../image/subbanner_1.png") no-repeat 80% 50%; background-size:cover;
+}
+
+.sub2 a {
+  display:block;
+  height:80px;
+  background:url("../image/subbanner_2.png") no-repeat 80% 50%; background-size:cover;
+}
+.sub3 a {
+  display:block;
+  height:80px;
+  background:url("../image/subbanner_1.png") no-repeat 80% 50%; background-size:cover;
+}
+
+
+/* YOUTUBE */
+
+.youtube-wrapper {
+  margin: 8.2vh auto 0;
+}
+section h2{
+  padding-bottom:24px;
+  font-size:4.3vw;
+  font-weight:700;
+}
+
+.youtube-video {
+  position:relative;
+  border-radius: 15px;
+  width:100%;
+  padding-top:56.25%;
+  overflow:hidden;
+}
+
+iframe {
+ position:absolute;
+ top:0;
+ left:0;
+ width:100%;
+ height:100%;
+
+}
+
+.youtube-product {
+  padding: 30px 0;
+}
+
+.youtube-product li {
+    text-align: left;
+    line-height: 1.5;
+    padding: 11px 0 0;
+}
+
+figure {
+  display:flex;
+  justify-content: space-between;
+}
+/* 매거진B */
+
+
+
+.magazine-wrapper {
+  margin:8.2vh auto 0;
+  overflow:hidden;
+}
+
+.magazine-wrapper .swiper-slide {
+  margin:0 auto;
+  text-align: left;
+}
+
+
+
+.magazine-wrapper .swiper-slide img{
+  width:100%;
+}
+.magazine-wrapper .mtext {
+  padding: 13px 0;
+  /* text-indent: 10px; */
+  text-align: left;
+}
+
+.magazine_content h3 {
+  font-size:2.9vw;
+  font-weight:700;
+  line-height:1.4;
+}
+
+.magazine_content p {
+  font-size:2.5vw;
+  /* line-height:1.618; */
+  font-family: 'Pretendard light';
+  font-weight:400;
+  line-height:1.618;
+}
+
 
 /* 태블릿화면 */
 @media screen and (min-width:576px) {
@@ -1022,7 +1116,7 @@ span.txt {
   }
 
   #Ptab-wrapper {
-    /* margin: 0 auto; */
+    margin: 135px auto;
     display: block;
   }
 
