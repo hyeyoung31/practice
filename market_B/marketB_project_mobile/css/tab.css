@@ -404,33 +404,27 @@ figcaption {
   top: 2px;
 }
 
-/* .swiper-pagination {
-  visibility: hidden;
- } */
-
+/* 페이지네이션 */
+.Mtabs-content .swiper-pagination {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.swiper-pagination-bullet {
+ width:20px;
+ height:3px;
+ color:#939393;
+ border-radius: 0;
+ display:inline-block;
+ box-sizing: border-box;
+ margin: 0 3px;
+}
                        
 
 #Ptab-wrapper {
   display: none;
 }
 
-
-.tab-pagination{
-  margin-top:10px;
- }
-
- .tab-pagination span {
-  width:20px;
-  height:3px;
-  display:inline-block;
-  background:rgba(0,0,0,0.5);
-  z-index:1;
-  margin: 0 2px;
-}
-
-.pager span.active{
-  background:rgba(0,0,0,1); 
-}  
 
 /* 서브배너 */
 .sub-banner {
@@ -439,26 +433,26 @@ figcaption {
   height:80px;
   width: 90%;
   margin: 8.2vh auto 0;
+  position:relative;
 }
 
+.sub-banner a{
+  height:80px;
+}
 
 .sub1 a {
   display:block;
-  height:80px;
   background:url("../image/subbanner_1.png") no-repeat 80% 50%; background-size:cover;
 }
 
 .sub2 a {
   display:block;
-  height:80px;
   background:url("../image/subbanner_2.png") no-repeat 80% 50%; background-size:cover;
 }
 .sub3 a {
   display:block;
-  height:80px;
   background:url("../image/subbanner_1.png") no-repeat 80% 50%; background-size:cover;
 }
-
 
 /* YOUTUBE */
 
@@ -475,6 +469,7 @@ section h2{
   position:relative;
   border-radius: 15px;
   width:100%;
+  height:0;
   padding-top:56.25%;
   overflow:hidden;
 }
@@ -502,6 +497,10 @@ figure {
   display:flex;
   justify-content: space-between;
 }
+
+.youtube-banner{
+  display:none;
+}
 /* 매거진B */
 
 
@@ -527,13 +526,13 @@ figure {
   text-align: left;
 }
 
-.magazine_content h3 {
+.magazine-content h3 {
   font-size:2.9vw;
   font-weight:700;
   line-height:1.4;
 }
 
-.magazine_content p {
+.magazine-content p {
   font-size:2.5vw;
   /* line-height:1.618; */
   font-family: 'Pretendard light';
@@ -619,6 +618,52 @@ figure {
     width: 50%;
   }
 
+  /* 서브배너 */
+  .sub-banner {
+    border-radius: 13px;
+    height:130px;
+    width: 90%;
+    margin: 135px auto 0;
+  }
+  
+  .sub-banner a{
+    height:150px;
+  }
+
+  /* 유튜브 */
+  
+section h2 {
+  font-size: 1.625rem;
+}
+  .youtube-product{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:10px;
+  }
+
+   .mproduct-item {
+    flex:1;
+   }
+
+    /* 매거진 */
+    .magazine-content h3 {
+      font-size:1.1rem;
+      line-height:1.4;
+    }
+
+    
+    .magazine-content p {
+      font-size:0.94rem;
+      line-height:1.6;
+    }
+    
+    
+.youtube-video{
+  width:760px;
+  height: 427px;
+  border-radius: 15px; overflow:hidden;
+}
 }
 
 @media screen and (min-width:768px) {
@@ -1326,6 +1371,26 @@ span.txt {
     font-family: 'Pretendard-SemiBold';
     font-weight: 600;
   }
+
+    /* 서브배너 */
+    .sub-banner {
+      border-radius: 13px;
+      height:200px;
+      margin: 135px auto 0;
+    }
+    
+    .sub-banner a{
+      height:200px;
+    }
+
+    /* 유뷰브 */
+  
+    .youtube-content {
+      display:flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .youtube-product{display:block;}
 }
 
 @media screen and (min-width:1200px) {
