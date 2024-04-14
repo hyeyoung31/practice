@@ -65,17 +65,6 @@ header .material-symbols-outlined  {
   font-size:26px;
 }
 
-/* [슬라이드] */
-
-
-/* 공통 */
-
-
-
-/* 추가 */
-
-
-
 /* 모바일 */
 .mainbanner {
  width:100%;
@@ -139,8 +128,6 @@ header .material-symbols-outlined  {
   font-weight: 500;
   text-align:left;
 }
-
-
 
 /* 페이지네이션 */
 
@@ -454,24 +441,36 @@ figcaption {
   background:url("../image/subbanner_1.png") no-repeat 80% 50%; background-size:cover;
 }
 
-/* YOUTUBE */
-
-.youtube-wrapper {
-  margin: 8.2vh auto 0;
-}
 section h2{
   padding-bottom:24px;
   font-size:4.3vw;
   font-weight:700;
 }
 
+/* 유튜브  */
+
+.youtube-wrapper {
+  margin: 8.2vh auto 0;
+} 
+
+.youtube-content {
+  display: grid;  
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap:22px;
+}
+
+.youtube-content figcaption{
+  line-height: 1.5;
+}
 .youtube-video {
   position:relative;
   border-radius: 15px;
   width:100%;
   height:0;
-  padding-top:56.25%;
+  padding-top: 56.25%;
   overflow:hidden;
+  margin-bottom:8px;
 }
 
 iframe {
@@ -483,28 +482,15 @@ iframe {
 
 }
 
-.youtube-product {
-  padding: 30px 0;
+.item-image {
+  width:40%;
+}
+.item-image img{
+  width:100%;
 }
 
-.youtube-product li {
-    text-align: left;
-    line-height: 1.5;
-    padding: 11px 0 0;
-}
 
-figure {
-  display:flex;
-  justify-content: space-between;
-}
-
-.youtube-banner{
-  display:none;
-}
-/* 매거진B */
-
-
-
+/* 매거진 */
 .magazine-wrapper {
   margin:8.2vh auto 0;
   overflow:hidden;
@@ -635,16 +621,25 @@ figure {
 section h2 {
   font-size: 1.625rem;
 }
-  .youtube-product{
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    gap:10px;
+
+   .youtube-content {
+
+    grid-template-columns: 1fr 1fr;
+    gap:22px 11px;
   }
 
-   .mproduct-item {
-    flex:1;
-   }
+  .youtube-video {
+    grid-column:1/3;
+    height:auto;
+  }
+
+  .mproduct-item1{
+    grid-column:1/2;
+  }
+
+  .mproduct-item2{
+    grid-column:2/3;
+  }
 
     /* 매거진 */
     .magazine-content h3 {
@@ -658,12 +653,6 @@ section h2 {
       line-height:1.6;
     }
     
-    
-.youtube-video{
-  width:760px;
-  height: 427px;
-  border-radius: 15px; overflow:hidden;
-}
 }
 
 @media screen and (min-width:768px) {
@@ -683,9 +672,6 @@ section h2 {
 
 /* pc화면 */
 @media screen and (min-width:1025px) {
-  /* .container{
-    width:90%;
-    max-width:1296px;} */
 
   /* 해더 */
 
@@ -874,8 +860,6 @@ input {
   height:754px;
   z-index:99;
 }
-
-
 
 
 /* 아이콘메뉴 */
@@ -1146,14 +1130,6 @@ span.txt {
   display: block;
 }
 
-/* 배너 */
-
-/* #M-mainbanner{
-  display:none;
-} */
-
-
-
   /* 탭 */
 
   #Mtab-wrapper {
@@ -1291,9 +1267,6 @@ span.txt {
     float: right;
   }
 
-  .like {
-    position: static;
-  }
 
   .Pnested-content .item:hover .hover_wrapper .right-wrapper {
     margin-right: 0px;
@@ -1383,15 +1356,31 @@ span.txt {
       height:200px;
     }
 
-    /* 유뷰브 */
-  
-    .youtube-content {
-      display:flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .youtube-product{display:block;}
+     /* 유튜브 */
+     
+   .youtube-content {
+    grid-template-columns: 1.9fr 1fr;
+    grid-template-rows : 1fr 1fr;
+    gap:  22px 6%;
+  }
+
+  .youtube-video {
+    grid-column:1/2;
+    grid-row: 1/3;;
+  }
+
+  .mproduct-item1{
+    grid-column:2/3;
+    grid-row: 1/2;
+  }
+
+  .mproduct-item2{
+    grid-column:2/3;
+    grid-row: 2/3;
+  }
+
 }
+
 
 @media screen and (min-width:1200px) {
   .container {
