@@ -162,12 +162,11 @@ $('#next').click(function(){
   });
 
 
-  var swiper = new Swiper('.magazine-wrapper', {
+ var swiper = new Swiper('.magazine-wrapper', {
     direction: 'horizontal',
     loop: true,
-
     slidesPerView: 2,
-spaceBetween: 18,
+spaceBetween: 20,
 breakpoints: {
 576: {
   slidesPerView: 2,
@@ -175,11 +174,16 @@ breakpoints: {
   },
  1025: {
     slidesPerView: 3,
-    spaceBetween: 20
+    spaceBetween: CalculateSpaceBetween(),
     },
-
   }
+});
 
+function CalculateSpaceBetween() {
+  var containerWidth = document.querySelector('.magazine-wrapper').offsetWidth;
+  var spacePercentage = 5;
+  var spaceBetween = containerWidth * (spacePercentage / 100);
+  return spaceBetween;
+}
 });
-  
-});
+
