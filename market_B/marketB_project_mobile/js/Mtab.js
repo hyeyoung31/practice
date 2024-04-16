@@ -1,7 +1,7 @@
 $(function() {
 
 var totalSlide = $('.mainbanner .swiper-slide').length;
-var fragment = document.querySelector('.mainbanner .swiper-pagination');
+var fragment = document.querySelector(' .banner-pagination');
 
 fragment.innerHTML = ('<span style="color:white;">' + 1 + '</span> <span class="mainbanner_bar"></span> ' + totalSlide);
 
@@ -33,14 +33,26 @@ var swiper = new Swiper('.mainbanner', {
     delay: 3500,
     disableOnInteraction: false,
   },
-
-
 });
 
+let play = $('.start');
+let pause = $('.pause');
+
+
+pause.on('click', function () {
+  swiper.autoplay.stop();
+  pause.removeClass('active');
+  play.addClass('active');
+});
+
+play.on('click', function () {
+  swiper.autoplay.start();
+  play.removeClass('active');
+  pause.addClass('active');
+})
 
 
 // 아이콘메뉴
-
 var swiper = new Swiper('.multiple', {
   // Optional parameters
   direction: 'horizontal',
@@ -142,7 +154,6 @@ $('#next').click(function(){
             slidesPerView: 2,
             spaceBetween: 20
           }
-    
   }};
 
  
@@ -151,20 +162,29 @@ $('#next').click(function(){
     const swiper = new Swiper(this, swiperOptions);
   });
 
+
   var swiper = new Swiper('.sub-banner', {
+    slidesPerView: 1,
+    loop: true,
+    loopedSLides: 3,
+    simulateTouch: true,
+    grabCursor: true,
+    speed: 800,
+    loopAdditionalSlides: 1,
+    autoplay: {
+      delay: 3500,
+      disableOnInteraction: true,
+    }, 
+  });
+  
+
+  var swiper = new Swiper('.magazine-wrapper', {
     direction: 'horizontal',
     loop: true,
-
     pagination: {
-      el: '.sub-banner-pagination', 
+      el: '.swiper-pagination', 
       clickable: true 
     },
-  });
-
-
- var swiper = new Swiper('.magazine-wrapper', {
-    direction: 'horizontal',
-    loop: true,
     slidesPerView: 2,
 spaceBetween: 20,
 breakpoints: {
@@ -185,5 +205,40 @@ function CalculateSpaceBetween() {
   var spaceBetween = containerWidth * (spacePercentage / 100);
   return spaceBetween;
 }
+
+let lastScrollTop = 0;
+let delta = 5;
+const fixBox = document.querySelector('.bottom-nav');
+const fixBoxHeight = fixBox.offsetHeight;
+let didScroll;
+window.onscroll = function(e) {
+  didScroll = true;
+};
+
+setInterval(function(){
+  if(didScroll){
+    hasScrolled();
+    didScroll = false;
+  }
+}, 250);
+
+function hasScrolled(){
+  let nowScrollTop = window.scrollY;
+  if(Math.abs(lastScrollTop - nowScrollTop) <= delta){
+    return;
+  }
+  if(nowScrollTop > lastScrollTop && nowScrollTop > fixBoxHeight){
+    fixBox.classList.remove('show');
+  }else{
+    if(nowScrollTop + window.innerHeight < document.body.offsetHeight){
+      fixBox.classList.add('show');
+    }
+  }
+  lastScrollTop = nowScrollTop;
+}	
+
 });
+
+
+
 
