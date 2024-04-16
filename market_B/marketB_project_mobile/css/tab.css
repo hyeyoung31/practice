@@ -15,6 +15,52 @@ a {
   margin: 0 auto;
 }
 
+/* 공통  요소 */
+.swiper-pagination{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index:50;
+  margin-top:15px;
+}
+
+
+.hidden {display:none;}
+
+.banner-pagination {
+  position:absolute;
+  bottom: 34px;
+  right:9%;
+}
+
+
+.banner-pagination {
+  width: 70px;
+  height: 34px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 50px;
+  position:absolute;
+  bottom: 34px;
+  right: 34px;
+  color: rgba(255, 255, 255, 0.4);
+  text-align: center;
+  font-size: 15px;
+  line-height: 34px;
+  z-index:10;
+}
+
+.banner-pagination .mainbanner_bar {
+  width: 2px;
+  height: 12px;
+  background-color: #fff;
+  display: inline-block;
+  margin: 0 3px;
+  transform: translate(1px, 1px)
+}
+
+.banner-pagination-current {
+  color: #fff !important;
+}
 /* 모바일헤드 */
 
 .Pheader {
@@ -71,6 +117,7 @@ header .material-symbols-outlined  {
  /* height:32.5rem; */
  height:650px;
  overflow: hidden;
+ position:relative;
 }
 
 .mainbanner .swiper-slide{
@@ -136,31 +183,6 @@ header .material-symbols-outlined  {
   margin:0 auto;
 }
 
-.mainbanner .swiper-pagination {
-  width: 70px;
-  height: 34px;
-  background: rgba(0, 0, 0, 0.3);
-  bottom: 34px;
-  border-radius: 50px;
-  right: 34px;
-  color: rgba(255, 255, 255, 0.4);
-  font-size: 15px;
-  line-height: 34px;
-}
-
-.mainbanner .swiper-pagination .mainbanner_bar {
-  width: 2px;
-  height: 12px;
-  background-color: #fff;
-  display: inline-block;
-  margin: 0 3px;
-  transform: translate(1px, 1px)
-}
-
-.mainbanner .swiper-pagination-current {
-  color: #fff !important;
-}
-
 
 .mainbanner .swiper-progressbar {
   height: 4px;
@@ -174,8 +196,7 @@ header .material-symbols-outlined  {
   z-index: 1;
   top: inherit;
 }
-
-
+ 
 /* 아이콘 바로가기 메뉴 */
 
 
@@ -224,9 +245,9 @@ padding:30px 0;
   z-index:1;
 }
 
-.swiper-button-prev,.swiper-button-next{
+/* .swiper-button-prev,.swiper-button-next{
   visibility: hidden;
-}
+} */
 
 
 
@@ -386,21 +407,6 @@ figcaption {
 }
 
 /* 페이지네이션 */
-.Mtabs-content .swiper-pagination {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
-/* .swiper-pagination-bullet {
- width:20px;
- height:3px;
- color:#939393;
- border-radius: 0;
- display:inline-block;
- box-sizing: border-box;
- margin: 0 3px;
-}000000000000000
-                        */
 
 #Ptab-wrapper {
   display: none;
@@ -409,21 +415,15 @@ figcaption {
 
 /* 서브배너 */
 .sub-banner {
-  border-radius: 13px;
-  overflow: hidden;
   height:80px;
   width: 90%;
   margin: 8.2vh auto 0;
   position:relative;
+  overflow:hidden;
+  border-radius: 13px;
 }
 
-.sub-banner .swiper-pagination{
-  position: absolute;
-  left: 50%;
-  bottom:-30px;
-  transform: translateX(-50%);
-  z-index:50;
-}
+
 
 .sub-banner a{
   height:80px;
@@ -508,6 +508,11 @@ iframe {
 .magazine-wrapper .swiper-slide img{
   width:100%;
 }
+
+.magazine-wrapper .swiper-pagination {
+  margin-top:0;
+}
+
 .magazine-wrapper .mtext {
   padding: 13px 0;
   /* text-indent: 10px; */
@@ -527,7 +532,6 @@ iframe {
   font-weight:400;
   line-height:1.618;
 }
-
 
 footer {
   background:#454545;
@@ -592,6 +596,16 @@ address {
   font-style: normal;
 }
 
+
+/* 하단탭바 */
+
+.bottom-nav {position: fixed; left: 0; bottom: 0; width: 100%; height: 80px;
+ color: #fff; text-align: center; z-index:999; background:#a9a9a9;}
+.bottom-wrapper {display:flex;text-align:center;justify-content:center;}
+.bottom-wrapper li {width:33.33%; padding:20px 0; }
+.bottom-wrapper li span {font-size:30px;}
+.bottom-nav {bottom: -80px;  transition:bottom .2s;}
+.bottom-nav.show {bottom: 0;}
 /* 태블릿화면 */
 @media screen and (min-width:576px) {
   .container {
@@ -621,6 +635,12 @@ address {
     text-align:left;
   }
   
+
+.mainbanner{
+  position:relative;
+}
+
+
   /* 아이콘메뉴 */
 
   #iconmenu .swiper-wrapper .swiper-slide span {
@@ -765,6 +785,67 @@ address {
 }
 
 @media screen and (min-width:768px) {
+  
+
+.mainbanner .button-wrapper .button{
+  position:absolute;
+  top:50%;
+  transform: translateY(-50%);
+}
+
+
+.mainbanner .button-wrapper .swiper-button-prev{
+  background: url(../image/swiper-button-prev.png) no-repeat 0 0/cover;
+  width:53px;
+  height:55px;
+  left:10%;
+  display:block;
+ }
+
+ .mainbanner .button-wrapper .swiper-button-next{
+  background: url(../image/swiper-button-next.png) no-repeat 0 0 / cover;
+  width:53px;
+  height:55px;
+  display:block;
+ }
+
+
+ .mainbanner .button-wrapper .next-button-wrapper{
+  left: calc(90% - 106px);
+  z-index:10;
+  display:flex;
+ }
+
+.mainbanner .play-button {
+  position:relative;
+}
+
+.mainbanner .play-button div {
+  position:absolute;
+  display:none;
+}
+
+.mainbanner .play-button .start.active{
+  display:block;
+}
+
+.mainbanner .play-button .pause.active{
+  display:block;
+}
+
+
+ .mainbanner .button-wrapper .start{
+  background: url(../image/swiper-play-button.png) no-repeat 0 0 / cover;
+  width:53px;
+  height:55px;
+ }
+
+ .mainbanner .button-wrapper .pause{
+  background: url(../image/swiper-button-pause.png) no-repeat 0 0 / cover;
+  width:53px;
+  height:55px;
+ } 
+
   .container {
     /* max-width: 720px; */
     max-width: 736px;
@@ -899,6 +980,7 @@ input {
 
 .head_icon {
   display:flex;
+  justify-content: space-between;
   text-align: center;
   right:0;
   margin-left:52px;
@@ -906,6 +988,9 @@ input {
   top:4px;
 }
 
+.head_icon div{
+  padding:0 5px;
+}
 /* 슬라이드 */
 
 
@@ -943,11 +1028,7 @@ input {
   height:100%;
 }
 
-.mainbanner .swiper-pagination {
-  position:absolute;
-  bottom: 34px;
-  right:9%;
-}
+
 .mainbanner .maintext-wrapper {
   color: #121212;
   position: absolute;
@@ -977,17 +1058,16 @@ input {
 }
 
 
+.mainbanner .button-wrapper .swiper-button-prev{
+  left:5%;
+ }
 
-.mainbanner .button-wrapper{
-  position:absolute;
-  top:108px;
-  left:50%;
-  transform: translateX(-50%);
-  width:100%;
-  height:754px;
-  z-index:99;
-}
 
+ .mainbanner .button-wrapper .next-button-wrapper{
+  left: calc(95% - 106px);
+  z-index:10;
+  display:flex;
+ }
 
 /* 아이콘메뉴 */
 
@@ -1505,7 +1585,14 @@ span.txt {
     grid-column:2/3;
     grid-row: 2/3;
   }
+
+  /* 탭바 */
+  .bottom-nav{
+    display:none;
+  }
+  
 }
+
 
 @media screen and (min-width:1200px) {
   .container {
