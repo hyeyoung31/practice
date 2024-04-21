@@ -1,5 +1,17 @@
 $(function() {
 
+  var wind = $(window),
+MtabBar = $('.bottom-nav');
+ console.log(wind. scrollTop());
+
+  wind.scroll(function(){
+    if( wind.scrollTop() >= 100){
+      MtabBar.addClass('show');
+    }else{
+      MtabBar.removeClass('show');
+    }
+   });
+   
 var totalSlide = $('.mainbanner .swiper-slide').length;
 var fragment = document.querySelector(' .banner-pagination');
 
@@ -37,8 +49,7 @@ var swiper = new Swiper('.mainbanner', {
 
 let play = $('.start');
 let pause = $('.pause');
-
-
+  
 pause.on('click', function () {
   swiper.autoplay.stop();
   pause.removeClass('active');
@@ -51,16 +62,14 @@ play.on('click', function () {
   pause.addClass('active');
 })
 
-
-// 아이콘메뉴
 var swiper = new Swiper('.multiple', {
   // Optional parameters
   direction: 'horizontal',
   loop: true,
 
   navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.next',
+      prevEl: '.prev',
   },
   slidesPerView: 5,
 spaceBetween: 20,
@@ -105,9 +114,6 @@ $('#next').click(function(){
   swiper.slideNext();
 });
 
-
-
-// 탭
   let tabLink = $('.Mtabs li a');
   let nestedLink = $('.Mnested-tabs li a');
 
@@ -152,8 +158,9 @@ $('#next').click(function(){
         breakpoints: {
           576: {
             slidesPerView: 2,
-            spaceBetween: 20
+            spaceBetween: 30
           }
+    
   }};
 
  
@@ -174,7 +181,9 @@ $('#next').click(function(){
     autoplay: {
       delay: 3500,
       disableOnInteraction: true,
-    }, 
+    },
+  
+  
   });
   
 
@@ -190,7 +199,7 @@ spaceBetween: 20,
 breakpoints: {
 576: {
   slidesPerView: 2,
-  spaceBetween: 20
+  spaceBetween: 25
   },
  1025: {
     slidesPerView: 3,
@@ -206,39 +215,44 @@ function CalculateSpaceBetween() {
   return spaceBetween;
 }
 
-let lastScrollTop = 0;
-let delta = 5;
-const fixBox = document.querySelector('.bottom-nav');
-const fixBoxHeight = fixBox.offsetHeight;
-let didScroll;
-window.onscroll = function(e) {
-  didScroll = true;
-};
 
-setInterval(function(){
-  if(didScroll){
-    hasScrolled();
-    didScroll = false;
-  }
-}, 250);
+$( ".hamburger" ).click(function() {
+  $(".mt-menu").animate({marginLeft:"100%"}, 300);
+$( ".hamburger" ).hide();
+$( ".cross" ).show();
+});
 
-function hasScrolled(){
-  let nowScrollTop = window.scrollY;
-  if(Math.abs(lastScrollTop - nowScrollTop) <= delta){
-    return;
-  }
-  if(nowScrollTop > lastScrollTop && nowScrollTop > fixBoxHeight){
-    fixBox.classList.remove('show');
-  }else{
-    if(nowScrollTop + window.innerHeight < document.body.offsetHeight){
-      fixBox.classList.add('show');
-    }
-  }
-  lastScrollTop = nowScrollTop;
-}	
-
+$( ".cross" ).click(function() {
+  $(".mt-menu").animate({marginLeft:"0px"}, 300);
+$( ".cross" ).hide();
+$( ".hamburger" ).show();
 });
 
 
+var Mmenu = {
+  clickE:function(target) {
+    var $target = $(target);
+
+
+    $target.on('click', 'a', function(){
+
+      var $this = $(this);
+      var $depthTarget = $this.next(); //ul
+      var $siblings = $this.parent().siblings(); //li
+  
+      if($(this).next().is(":visible")){
+        $depthTarget.stop().slideUp(500);
+        $(this).children("img").attr("src","img/arrow-down.png");
+        }else{
+         $siblings.stop().slideUp(500);
+         $depthTarget.stop().slideDown(500);
+        $(this).children("img").attr("src","img/arrow-up.png");
+      };	
+       });
+  }
+}
+Mmenu.clickE('.menu-list li')
+
+});
 
 
